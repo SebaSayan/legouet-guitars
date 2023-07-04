@@ -1,0 +1,29 @@
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .logo-footer {
+        background: url('../../assets/img/logosite3.png') center/cover;
+        height: 300px;
+        width: 650px;
+        margin: 0 auto;
+    }
+
+    .footer-item {
+        display: flex;
+        width: 500px;
+        margin: 10px auto;
+
+        .footer-ico {
+            margin: 0 10px;
+            height: 25px;
+            width: 19px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}

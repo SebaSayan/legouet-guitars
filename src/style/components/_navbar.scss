@@ -1,0 +1,50 @@
+nav {
+    width: 650px;
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+
+        li {
+            list-style: none;
+
+            a {
+                position: relative;
+                color: white;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &.nav-active::before {
+                    content: "𝄞";
+                    margin-right: 5px;
+                    color: white;
+                    transition: transform 0.4s ease-in-out;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 0;
+                    height: 2px;
+                    background-color: white;
+                    transform: translateX(-50%);
+                    transition: 0.4s;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}
+
+@keyframes draw-border {
+    to {
+        border-width: 100%;
+    }
+}

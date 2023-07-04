@@ -1,0 +1,28 @@
+.background-image {
+
+    .logo {
+        background: url('../../assets/img/logosite3.png') center/cover;
+        height: 300px;
+        width: 650px;
+    }
+
+    .home {
+        width: 99vw;
+
+        h1 {
+            font-size: 2rem;
+            margin: 300px 0;
+            text-align: center;
+        }
+
+        .text-container {
+            // border: 1px solid white;
+            width: 1200px;
+            margin: 0 auto;
+
+            p {
+                margin: 20px 0;
+            }
+        }
+    }
+}
