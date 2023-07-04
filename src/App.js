@@ -5,6 +5,7 @@ import Guitars from "./pages/Guitars";
 import Contact from "./pages/Contact";
 import MentionsLegales from "./pages/MentionsLegales";
 import NotFound from "./pages/NotFound";
+import Confidentiality from "./pages/Confidentiality";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/guitares" element={<Guitars />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
+        <Route path="/confidentialite" element={<Confidentiality />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
