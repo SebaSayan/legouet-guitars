@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 const Home = () => {
     return (
-        <div className="background-image">
+        <div className="body">
             <Header />
             <section className='home'>
                 <h1><strong>Fabrication  française</strong> de guitares électriques en aluminium.</h1>

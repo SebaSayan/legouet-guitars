@@ -1,10 +1,12 @@
 import React from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Confidentiality = () => {
     return (
-        <div className="background-image">
+        <div className="body">
             <Header />
+            <Footer />
         </div>
     );
 };
