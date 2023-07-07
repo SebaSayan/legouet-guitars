@@ -1,0 +1,56 @@
+form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .form-cart {
+        background: rgba(0, 0, 0, 0.5);
+        border: 1px solid grey;
+        width: 1200px;
+        margin: 0 10px;
+        margin-bottom: 20px;
+        padding: 20px 10px;
+
+        label {
+            display: flex;
+            transition: 0.4s;
+
+            &.selected {
+                background: white;
+                color: black;
+            }
+
+            input[type='radio'] {
+                display: none;
+            }
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bottom-form {
+        display: flex;
+        flex-direction: column;
+
+        button {
+            background: rgb(255, 255, 255);
+            color: black;
+            font-size: 1.1rem;
+            border: 1px solid white;
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin: 15px 0;
+            transition: 0.4s;
+
+            &:hover {
+                background: black;
+                color: white;
+                border: 1px solid black;
+            }
+        }
+    }
+}
