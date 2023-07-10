@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { parsePhoneNumberFromString } from 'libphonenumber-js';
 
 
 const QuoteForm = () => {
@@ -13,9 +15,12 @@ const QuoteForm = () => {
     const [part3Value, setPart3Value] = useState('');
     const [part4Value, setPart4Value] = useState('');
     const [part5Value, setPart5Value] = useState('');
-    const [isChecked, setIsChecked] = useState(false);
+    const [isCheckedConf, setIsCheckedConf] = useState(false);
+    const [isCheckedBot, setIsCheckedBot] = useState(false);
     const [errorForm, setErrorForm] = useState({});
     const [sendMail, setSendMail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [phoneNumberError, setPhoneNumberError] = useState(false);
     const [message, setMessage] = useState("");
     const [result, setResult] = useState('');
     const [email, setEmail] = useState("");
@@ -65,6 +70,51 @@ const QuoteForm = () => {
         // Classe ETUIS
         option1EtuiPrice: "215",
     }
+
+    const descriptions = {
+        // Classe Corps
+        option1Price: "Corps aluminium vernis mat ou brillant avec motif usinage apparent",
+        option2Price: "Corps aluminium peinture et vernis selon gamme RAL Design",
+        option3Price: "Corps aluminium vernis coloré avec motif usinage apparent",
+        option4Price: "Corps aluminium traitement Cerakote",
+        option5Price: "Corps titane vernis",
+        option6Price: "Corps titane traitement Cerakote",
+
+        // Classe ACCASTILLAGE ET VIBRATOS
+        optionAPrice: "Tune o matic laiton",
+        optionBPrice: "Tune o matic aluminium",
+        optionCPrice: "Tune o matic acier inox",
+        optionDPrice: "Tune o matic titane",
+        optionEPrice: "Cordier inox pontet aluminium",
+        optionFPrice: "Cordier inox pontet laiton",
+        optionGPrice: "Cordier inox pontet inox",
+        optionHPrice: "Cordier inox pontet titane",
+        optionIPrice: "Floyd rose non fine tuner",
+        optionJPrice: "Floyd rose",
+        optionKPrice: "Vegatrem",
+        optionLPrice: "Schaller Vintage Tremolo C",
+
+        // Classe MICROS
+        option1MicroPrice: "Deux simples (type Telecaster au choix)",
+        option2MicroPrice: "Trois simples (type Stratocaster au choix)",
+        option3MicroPrice: "Deux doubles (humbucker au choix)",
+        option4MicroPrice: "Deux simples et un double (au choix)",
+
+        // Classe MANCHES - FRETTES INOX
+        option1ManchePrice: "Erable ondé une pièce",
+        option2ManchePrice: "Ovangkol une pièce",
+        option3ManchePrice: "Autres bois avec touche rapportée",
+        option4ManchePrice: "Aluminium light weight brossé",
+        option5ManchePrice: "Aluminium light weight poli",
+        option6ManchePrice: "Aluminium light weight brossé vernis",
+        option7ManchePrice: "Aluminium light weight poli vernis",
+        option8ManchePrice: "INFINITE alu/inox brossé ou poli",
+        option9ManchePrice: "INFINITE alu/inox brossé ou poli et vernis",
+        option10ManchePrice: "INFINITE alu/inox Cerakote",
+
+        // Classe ETUIS
+        option1EtuiPrice: "Etui Hiscox Case",
+    };
 
     const calculateTotal = (newPart1Value, newPart2Value, newPart3Value, newPart4Value, newPart5Value) => {
         const pricePart1 = parseInt(prices[newPart1Value]);
@@ -132,16 +182,32 @@ const QuoteForm = () => {
             errors.email = "L'adresse email n'est pas valide";
         }
 
-        if (message.length < 10) {
+        // if (message.length < 10) {
+        //     isValid = false;
+        //     errors.message = "Le message doit contenir au moins 10 caractères";
+        // }
+        if (!isCheckedConf) {
             isValid = false;
-            errors.message = "Le message doit contenir au moins 10 caractères";
+            errors.checkbox = "Veuillez confirmer les conditions d'utilisations";
         }
-        if (!isChecked) {
+        if (!isCheckedBot) {
             isValid = false;
             errors.checkbox = "Veuillez confirmer que vous n'êtes pas un robot.";
         }
 
         return { isValid, errors };
+    };
+
+    const handlePhoneNumberChange = (e) => {
+        const newPhoneNumber = e.target.value;
+        setPhoneNumber(newPhoneNumber);
+
+        const phoneNumberObject = parsePhoneNumberFromString(newPhoneNumber);
+        if (phoneNumberObject && phoneNumberObject.isValid()) {
+            setPhoneNumberError(false);
+        } else {
+            setPhoneNumberError(true);
+        }
     };
 
     const handleSubmit = async (e) => {
@@ -154,14 +220,22 @@ const QuoteForm = () => {
             console.log(errors);
             return;
         }
+
         try {
-            const response = await axios.post(
-                "https://api.sendinblue.com/v3/smtp/email",
+            const adminEmailPromise = axios.post(
+                "https://api.brevo.com/v3/smtp/email",
                 {
                     sender: { name, email },
-                    to: [{ email: "contact@creawebdev.fr" }],
-                    subject: "Message du formulaire CreaWebDev",
-                    htmlContent: message,
+                    to: [{ email: "sebastien-1985@live.fr" }],
+                    subject: "Message du formulaire Legouet Guitares - Administrateur",
+                    htmlContent: `<p>Bonjour, un client a validé le devis en ligne. Voici le contenu de celui-ci :</p>
+              <p>${message}</p>
+              <p>${descriptions[part1Value]} (${prices[part1Value]}€)</p>
+              <p>${descriptions[part2Value]} (${prices[part2Value]}€)</p>
+              <p>${descriptions[part3Value]} (${prices[part3Value]}€)</p>
+              <p>${descriptions[part4Value]} (${prices[part4Value]}€)</p>
+              <p>${descriptions[part5Value]} (${prices[part5Value]}€)</p>
+              <p>Prix total: ${result}€ TTC</p>`,
                 },
                 {
                     headers: {
@@ -171,20 +245,52 @@ const QuoteForm = () => {
                     },
                 }
             );
-            console.log(response);
+
+            const clientEmailPromise = axios.post(
+                "https://api.brevo.com/v3/smtp/email",
+                {
+                    sender: { name, email },
+                    to: [{ email: email }],
+                    subject: "Legouet Guitares - votre demande de devis",
+                    htmlContent: `<p>Bonjour ${name}, voici votre demande de devis.</p>
+              <p>Après vérification par un administrateur, vous recevrez un nouvel email contenant un devis officiel valable 30 jours à compter de la réception de celui-ci.</p>                    
+              <p>${descriptions[part1Value]} (${prices[part1Value]}€)</p>
+              <p>${descriptions[part2Value]} (${prices[part2Value]}€)</p>
+              <p>${descriptions[part3Value]} (${prices[part3Value]}€)</p>
+              <p>${descriptions[part4Value]} (${prices[part4Value]}€)</p>
+              <p>${descriptions[part5Value]} (${prices[part5Value]}€)</p>
+              <p>Prix total: ${result}€ TTC</p>`,
+                },
+                {
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                        "api-key": process.env.REACT_APP_SENDINGBLUE_EMAIL,
+                    },
+                }
+            );
+
+            const [adminResponse, clientResponse] = await axios.all([adminEmailPromise, clientEmailPromise]);
+
+            console.log("Admin email response:", adminResponse);
+            console.log("Client email response:", clientResponse);
+
             setName("");
             setEmail("");
             setMessage("");
             setErrorForm({});
-            setIsChecked(false);
+            setIsCheckedConf(false);
+            setIsCheckedBot(false);
             setSendMail("Votre message a été envoyé avec succès !");
         } catch (error) {
             console.error(error);
             setErrorForm({});
-            setIsChecked(false);
+            setIsCheckedConf(false);
+            setIsCheckedBot(false);
             setSendMail("Une erreur est survenue lors de l'envoi de votre message.");
         }
     };
+
 
     return (
         <form onSubmit={handleSubmit}>
@@ -505,7 +611,7 @@ const QuoteForm = () => {
                     type="text"
                     id="name"
                     value={name}
-                    placeholder="Nom"
+                    placeholder="Nom*"
                     onChange={(e) => setName(e.target.value)}
                     required
                 />
@@ -513,27 +619,60 @@ const QuoteForm = () => {
                     type="email"
                     id="email"
                     value={email}
-                    placeholder="Email"
+                    placeholder="Email*"
                     onChange={(e) => setEmail(e.target.value)}
                     required
                 />
+                <input
+                    type="tel"
+                    id="phoneNumber"
+                    value={phoneNumber}
+                    placeholder="Numéro de téléphone*"
+                    onChange={handlePhoneNumberChange}
+                    required
+                />{phoneNumberError && <div>Veuillez entrer un numéro de téléphone valide, pour la France commencez par "+33"</div>}
                 <textarea
                     id="message"
                     value={message}
-                    placeholder="Message"
+                    placeholder="Message(facultatif)"
                     onChange={(e) => setMessage(e.target.value)}
                 />
-                <input
-                    type="checkbox"
-                    id="checkbox"
-                    checked={isChecked}
-                    onChange={(e) => setIsChecked(e.target.checked)}
-                    title="Cochez cette case pour prouver que vous n'êtes pas un robot"
-                />
+                <div className='check'>
+                    <div className='check-card'>
+                        <input
+                            type="checkbox"
+                            className="checkbox"
+                            id="checkbox"
+                            checked={isCheckedConf}
+                            onChange={(e) => setIsCheckedConf(e.target.checked)}
+                            title="Cochez cette case pour accepter les conditions générales d'utilisation"
+                        />  <label htmlFor="checkbox">J'ai lu et j'accepte <NavLink to="/confidentialite"> les conditions générales d'utilisation </NavLink></label>
+                    </div>
+                    <div className="check-card">
+                        <input
+                            type="checkbox"
+                            className="checkbox"
+                            id="checkbox-bot"
+                            checked={isCheckedBot}
+                            onChange={(e) => setIsCheckedBot(e.target.checked)}
+                            title="Cochez cette case pour prouver que vous n'êtes pas un robot"
+                        />  <label htmlFor="checkbox-bot">Je ne suis pas un robot</label>
+                    </div>
+                </div>
             </div>
             <div className="bottom-form">
+                <p>
+                    {Object.values(errorForm).length > 0
+                        ? Object.values(errorForm).map((error, index) => (
+                            <span key={index}>
+                                {error}
+                                <br />
+                            </span>
+                        ))
+                        : sendMail}
+                </p>
+                {result && <p>Total : {result}€ TTC</p>}
                 <button type="submit">Envoyer</button>
-                {result && <p>Résultat : {result}€</p>}
             </div>
         </form>
     );
