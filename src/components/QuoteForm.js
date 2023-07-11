@@ -221,6 +221,26 @@ const QuoteForm = () => {
             return;
         }
 
+        let htmlContentAdmin = `<p>Bonjour, un client a validé le devis en ligne. Voici le contenu de celui-ci :</p>
+            <p>${name}</p>
+            <p>${email}</p>
+            <p>${phoneNumber}</p>
+            <p>${message}</p>`;
+        let htmlContentClient = `<p>Bonjour ${name}, voici votre demande de devis.</p>
+            <p>Après vérification par un administrateur, vous recevrez un nouvel email contenant un devis officiel valable 30 jours à compter de la réception de celui-ci.</p>`;
+
+        const partValues = [part1Value, part2Value, part3Value, part4Value, part5Value];
+
+        partValues.forEach(partValue => {
+            if (partValue) {
+                htmlContentAdmin += `<p>${descriptions[partValue]} (${prices[partValue]}€)</p>`;
+                htmlContentClient += `<p>${descriptions[partValue]} (${prices[partValue]}€)</p>`;
+            }
+        });
+
+        htmlContentAdmin += `<p>Prix total: ${result}€ TTC</p>`;
+        htmlContentClient += `<p>Prix total: ${result}€ TTC</p>`;
+
         try {
             const adminEmailPromise = axios.post(
                 "https://api.brevo.com/v3/smtp/email",
@@ -228,14 +248,7 @@ const QuoteForm = () => {
                     sender: { name, email },
                     to: [{ email: "sebastien-1985@live.fr" }],
                     subject: "Message du formulaire Legouet Guitares - Administrateur",
-                    htmlContent: `<p>Bonjour, un client a validé le devis en ligne. Voici le contenu de celui-ci :</p>
-              <p>${message}</p>
-              <p>${descriptions[part1Value]} (${prices[part1Value]}€)</p>
-              <p>${descriptions[part2Value]} (${prices[part2Value]}€)</p>
-              <p>${descriptions[part3Value]} (${prices[part3Value]}€)</p>
-              <p>${descriptions[part4Value]} (${prices[part4Value]}€)</p>
-              <p>${descriptions[part5Value]} (${prices[part5Value]}€)</p>
-              <p>Prix total: ${result}€ TTC</p>`,
+                    htmlContent: htmlContentAdmin
                 },
                 {
                     headers: {
@@ -252,14 +265,7 @@ const QuoteForm = () => {
                     sender: { name, email },
                     to: [{ email: email }],
                     subject: "Legouet Guitares - votre demande de devis",
-                    htmlContent: `<p>Bonjour ${name}, voici votre demande de devis.</p>
-              <p>Après vérification par un administrateur, vous recevrez un nouvel email contenant un devis officiel valable 30 jours à compter de la réception de celui-ci.</p>                    
-              <p>${descriptions[part1Value]} (${prices[part1Value]}€)</p>
-              <p>${descriptions[part2Value]} (${prices[part2Value]}€)</p>
-              <p>${descriptions[part3Value]} (${prices[part3Value]}€)</p>
-              <p>${descriptions[part4Value]} (${prices[part4Value]}€)</p>
-              <p>${descriptions[part5Value]} (${prices[part5Value]}€)</p>
-              <p>Prix total: ${result}€ TTC</p>`,
+                    htmlContent: htmlContentClient
                 },
                 {
                     headers: {
