@@ -1,0 +1,45 @@
+.body {
+    .contact {
+        background: rgba(0, 0, 0, 0.753);
+        width: 99vw;
+
+        p {
+            width: 1200px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 300px 0 100px;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            width: 1200px;
+            margin: 0 auto;
+
+            .address {
+                width: 500px;
+                margin: 0 auto;
+                padding-bottom: 50px;
+
+                p {
+                    margin: 20px 0;
+                }
+            }
+
+            .form-contact {
+                width: 500px;
+                margin: 0 auto;
+
+                h2 {
+                    margin-bottom: 30px;
+                }
+
+            }
+        }
+    }
+}

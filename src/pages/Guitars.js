@@ -9,6 +9,14 @@ import imgMetalPrecision2 from '../assets/img/img_5753.jpg';
 import imgStudio1 from '../assets/img/img_0029.jpg';
 import imgStudio2 from '../assets/img/img_0039.jpg';
 import imgStudio3 from '../assets/img/img_0031.jpg';
+import imgRock1 from '../assets/img/img_0077.jpg';
+import imgRock2 from '../assets/img/img_0094.jpg';
+import imgRock3 from '../assets/img/img_0069.jpg';
+import imgSupreme1 from '../assets/img/img_0001.jpg';
+import imgSupreme2 from '../assets/img/img_0002.jpg';
+import imgUltime1 from '../assets/img/img_0007.jpg';
+import imgUltime2 from '../assets/img/img_0022.jpg';
+import imgVignette1 from '../assets/img/vignette1.jpg';
 import videoGuitar from '../assets/video/VID-20221221-WA0000.mp4';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -20,6 +28,9 @@ const Guitars = () => {
     const altJazzFusion = 'Guitare Jazz Fusion rouge';
     const altMetalPrecision = 'Guitare Metal précision';
     const altStudio = 'Guitare Studio Blanche';
+    const altRock = 'Guitare Rock Gold';
+    const altSupreme = 'Guitare Suprême en titane';
+    const altUltime = 'Guitare ULTIME corps en titane et manche aluminium vernis';
     const handleOpenModal = (image, alt) => {
         setSelectedImage(image);
         setSelectedAlt(alt);
@@ -121,9 +132,86 @@ const Guitars = () => {
                     <p>Ses Micros Legouet Humbucker permettent un registre très large passant du Jazz au métal technique qui peuvent se combiner au son du Capteur MIDI ( un son de piano et celui de la guitare en simultané).</p>
                     <p>Il est possible d'enregistrer un album entier avec ce seul instrument.</p>
                     <p>Poids = 3.450 Kg</p>
-                    <div>
-                        <ReactPlayer url={videoGuitar} controls />
+                    <div style={{ display: "flex", justifyContent: 'center' }}>
+                        <ReactPlayer url={videoGuitar} controls={true} light={imgVignette1} />
                     </div>
+                </div>
+                <h2>Rock</h2>
+                <div className="img-container">
+                    <img
+                        className='card'
+                        src={imgRock1}
+                        alt={altRock}
+                        onClick={() => handleOpenModal(imgRock1, altRock)}
+                        style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
+                    />
+                    <img
+                        className='card'
+                        src={imgRock2}
+                        alt={altRock}
+                        onClick={() => handleOpenModal(imgRock2, altRock)}
+                        style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
+                    />
+                    <img
+                        className='card'
+                        src={imgRock3}
+                        alt={altRock}
+                        onClick={() => handleOpenModal(imgRock3, altRock)}
+                        style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
+                    />
+                </div>
+                <div className='text-container'>
+                    <p>Corps aluminium peinture Gold, <strong>manche aluminium</strong> touche inox, <strong>acastillage inox</strong>, micros mini humbucker type firebird , 1 volume, 1 tone.</p>
+                    <p>Construction identique au modèle STUDIO, sauf que l'acastillage est en INOX (bouton de potentiomètre, tour de micros et chevalet).</p>
+                    <p>Ces micros type firebird lui confèrent une certaine  agressivité afin de reproduire vos chanson ROCK favorites.</p>
+                    <p>Cette guitare est à l'aise dans un registre qui va du rock au métal années 80.</p>
+                    <p>Poids = 3.400 Kg</p>
+                </div>
+                <h2>Suprême</h2>
+                <div className="img-container">
+                    <img
+                        className='card'
+                        src={imgSupreme1}
+                        alt={altSupreme}
+                        onClick={() => handleOpenModal(imgSupreme1, altSupreme)}
+                        style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
+                    />
+                    <img
+                        className='card'
+                        src={imgSupreme2}
+                        alt={altSupreme}
+                        onClick={() => handleOpenModal(imgSupreme2, altSupreme)}
+                        style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
+                    />
+                </div>
+                <div className='text-container'>
+                    <p>Corps en titane taillé dans la masse, vernis, cordier standard avec pontet en bronze, un manche en érable teinté noir, des repères en nacre blanc, des micros DI MARZIO Joe dupalntier, 1 volume , 1 tone et bouton aluminium.</p>
+                    <p>Une merveille esthétique et sonore qui ne peut laisser indifférent.</p>
+                    <p>Poids = 3.340 Kg</p>
+                    <p>https://www.youtube.com/watch?v=kVqpNewlAY8</p>
+                    <p>https://youtu.be/eUPjFY5QshY</p>
+                </div>
+                <h2>ULTIME</h2>
+                <div className="img-container">
+                    <img
+                        className='card'
+                        src={imgUltime1}
+                        alt={altUltime}
+                        onClick={() => handleOpenModal(imgUltime1, altUltime)}
+                        style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
+                    />
+                    <img
+                        className='card'
+                        src={imgUltime2}
+                        alt={altUltime}
+                        onClick={() => handleOpenModal(imgUltime2, altUltime)}
+                        style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
+                    />
+                </div>
+                <div className='text-container'>
+                    <p>Corps titane vernis, manche aluminium "infinite" vernis, micros legouet humbucker, cordier inox avec pontet titane, 1 volume splitable, 1 tone et bouton en aluminium.</p>
+                    <p> "ll y a un avant et un après".</p>
+                    <p>Poids = 3.570 Kg</p>
                 </div>
             </section>
             <Modal

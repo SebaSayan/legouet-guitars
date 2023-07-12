@@ -6,6 +6,11 @@ const MentionsLegales = () => {
     return (
         <div className="body">
             <Header />
+            <div className="mentions-legales">
+                <div className="container">
+                    <h1>Mentions légales</h1>
+                </div>
+            </div>
             <Footer />
         </div>
     );
