@@ -1,7 +1,10 @@
 import axios from 'axios';
-import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { parsePhoneNumberFromString } from 'libphonenumber-js';
+import 'react-phone-number-input/style.css';
+import PhoneInput from 'react-phone-number-input'
+import { isValidNumber } from 'libphonenumber-js';
+import React, { useEffect, useState } from 'react';
+
 
 
 const QuoteForm = () => {
@@ -17,14 +20,22 @@ const QuoteForm = () => {
     const [part5Value, setPart5Value] = useState('');
     const [isCheckedConf, setIsCheckedConf] = useState(false);
     const [isCheckedBot, setIsCheckedBot] = useState(false);
+    const [phoneNumber, setPhoneNumber] = useState("");
     const [errorForm, setErrorForm] = useState({});
     const [sendMail, setSendMail] = useState("");
-    const [phoneNumber, setPhoneNumber] = useState("");
-    const [phoneNumberError, setPhoneNumberError] = useState(false);
+    const [isValid, setIsValid] = useState(false);
     const [message, setMessage] = useState("");
     const [result, setResult] = useState('');
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
+
+    useEffect(() => {
+        if (phoneNumber) {
+            setIsValid(isValidNumber(phoneNumber));
+        } else {
+            setIsValid(false);
+        }
+    }, [phoneNumber]);
 
     const prices = {
         // Classe Corps
@@ -182,10 +193,6 @@ const QuoteForm = () => {
             errors.email = "L'adresse email n'est pas valide";
         }
 
-        // if (message.length < 10) {
-        //     isValid = false;
-        //     errors.message = "Le message doit contenir au moins 10 caractères";
-        // }
         if (!isCheckedConf) {
             isValid = false;
             errors.checkbox = "Veuillez confirmer les conditions d'utilisations";
@@ -198,17 +205,17 @@ const QuoteForm = () => {
         return { isValid, errors };
     };
 
-    const handlePhoneNumberChange = (e) => {
-        const newPhoneNumber = e.target.value;
-        setPhoneNumber(newPhoneNumber);
+    // const handlePhoneNumberChange = (e) => {
+    //     const newPhoneNumber = e.target.value;
+    //     setPhoneNumber(newPhoneNumber);
 
-        const phoneNumberObject = parsePhoneNumberFromString(newPhoneNumber);
-        if (phoneNumberObject && phoneNumberObject.isValid()) {
-            setPhoneNumberError(false);
-        } else {
-            setPhoneNumberError(true);
-        }
-    };
+    //     const phoneNumberObject = parsePhoneNumberFromString(newPhoneNumber);
+    //     if (phoneNumberObject && phoneNumberObject.isValid()) {
+    //         setPhoneNumberError(false);
+    //     } else {
+    //         setPhoneNumberError(true);
+    //     }
+    // };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -629,14 +636,17 @@ const QuoteForm = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                 />
-                <input
+                <PhoneInput
                     type="tel"
                     id="phoneNumber"
+                    placeholder="Téléphone*"
                     value={phoneNumber}
-                    placeholder="Numéro de téléphone*"
-                    onChange={handlePhoneNumberChange}
+                    onChange={value => setPhoneNumber(value)}
+                    defaultCountry="FR"
                     required
-                />{phoneNumberError && <div>Veuillez entrer un numéro de téléphone valide, pour la France commencez par "+33"</div>}
+                />      {phoneNumber && (
+                    <div>{isValid ? "" : "Le numéro de téléphone n'est pas valide."}</div>
+                )}
                 <textarea
                     id="message"
                     value={message}
@@ -652,7 +662,8 @@ const QuoteForm = () => {
                             checked={isCheckedConf}
                             onChange={(e) => setIsCheckedConf(e.target.checked)}
                             title="Cochez cette case pour accepter les conditions générales d'utilisation"
-                        />  <label htmlFor="checkbox">J'ai lu et j'accepte <NavLink to="/confidentialite"> les conditions générales d'utilisation </NavLink></label>
+                        />  <label htmlFor="checkbox">J'ai lu et j'accepte <NavLink to="/confidentialite">les conditions générales d'utilisation </NavLink></label>
+
                     </div>
                     <div className="check-card">
                         <input

@@ -1,20 +1,31 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React, { useEffect, useState } from 'react';
+import { isValidNumber } from 'libphonenumber-js';
+import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css';
 import { NavLink } from 'react-router-dom';
-import { parsePhoneNumberFromString } from 'libphonenumber-js';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import axios from 'axios';
 
 const Contact = () => {
     const [isCheckedConf, setIsCheckedConf] = useState(false);
     const [isCheckedBot, setIsCheckedBot] = useState(false);
-    const [errorForm, setErrorForm] = useState({});
-    const [sendMail, setSendMail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
-    const [phoneNumberError, setPhoneNumberError] = useState(false);
+    const [errorForm, setErrorForm] = useState({});
+    const [isValid, setIsValid] = useState(false);
+    const [sendMail, setSendMail] = useState("");
     const [message, setMessage] = useState("");
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
+
+    useEffect(() => {
+        if (phoneNumber) {
+            setIsValid(isValidNumber(phoneNumber));
+        } else {
+            setIsValid(false);
+        }
+    }, [phoneNumber]);
+
     const validateForm = () => {
         let isValid = true;
         let errors = {};
@@ -45,18 +56,6 @@ const Contact = () => {
         return { isValid, errors };
     };
 
-    const handlePhoneNumberChange = (e) => {
-        const newPhoneNumber = e.target.value;
-        setPhoneNumber(newPhoneNumber);
-
-        const phoneNumberObject = parsePhoneNumberFromString(newPhoneNumber);
-        if (phoneNumberObject && phoneNumberObject.isValid()) {
-            setPhoneNumberError(false);
-        } else {
-            setPhoneNumberError(true);
-        }
-    };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -68,23 +67,21 @@ const Contact = () => {
             return;
         }
 
-        let htmlContentAdmin = `<p>Bonjour, un client a validé le devis en ligne. Voici le contenu de celui-ci :</p>
+        let htmlContent = `<p>Bonjour, un client a un message "Contact". Voici le contenu de celui-ci :</p>
             <p>${name}</p>
             <p>${email}</p>
             <p>${phoneNumber}</p>
             <p>${message}</p>`;
-        let htmlContentClient = `<p>Bonjour ${name}, voici votre demande de devis.</p>
-            <p>Après vérification par un administrateur, vous recevrez un nouvel email contenant un devis officiel valable 30 jours à compter de la réception de celui-ci.</p>`;
 
 
         try {
-            const adminEmailPromise = axios.post(
+            const response = axios.post(
                 "https://api.brevo.com/v3/smtp/email",
                 {
                     sender: { name, email },
                     to: [{ email: "sebastien-1985@live.fr" }],
                     subject: "Message du formulaire Legouet Guitares - Administrateur",
-                    htmlContent: htmlContentAdmin
+                    htmlContent: htmlContent
                 },
                 {
                     headers: {
@@ -95,6 +92,7 @@ const Contact = () => {
                 }
             );
 
+            console.log(response);
             setName("");
             setEmail("");
             setMessage("");
@@ -146,18 +144,21 @@ const Contact = () => {
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
                                 />
-                                <input
+                                <PhoneInput
                                     type="tel"
                                     id="phoneNumber"
+                                    placeholder="Téléphone*"
                                     value={phoneNumber}
-                                    placeholder="Numéro de téléphone*"
-                                    onChange={handlePhoneNumberChange}
+                                    onChange={value => setPhoneNumber(value)}
+                                    defaultCountry="FR"
                                     required
-                                />{phoneNumberError && <div>Veuillez entrer un numéro de téléphone valide, pour la France commencez par "+33"</div>}
+                                />      {phoneNumber && (
+                                    <div>{isValid ? "" : "Le numéro de téléphone n'est pas valide."}</div>
+                                )}
                                 <textarea
                                     id="message"
                                     value={message}
-                                    placeholder="Message(facultatif)"
+                                    placeholder="Message*"
                                     onChange={(e) => setMessage(e.target.value)}
                                 />
                                 <div className='check'>
