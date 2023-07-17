@@ -1,6 +1,7 @@
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const FooterItem = ({ icon, children }) => (
     <div className="footer-item">
@@ -21,6 +22,9 @@ const Footer = () => (
         <FooterItem icon={faPhone}>
             <a href="tel:0492413966" title="Cliquez ici pour ouvrir votre gestionnaire d'appel par defaut">04 92 41 39 66</a>
         </FooterItem>
+        <div className="footer-bottom">
+            <NavLink to="/mentions-legales">Mentions légales</NavLink>
+        </div>
     </footer>
 );
 

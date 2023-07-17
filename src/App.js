@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import MentionsLegales from "./pages/MentionsLegales";
 import NotFound from "./pages/NotFound";
 import Confidentiality from "./pages/Confidentiality";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/confidentialite" element={<Confidentiality />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <ScrollToTopButton />
     </BrowserRouter>
   );
 }

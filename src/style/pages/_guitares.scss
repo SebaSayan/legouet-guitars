@@ -1,7 +1,7 @@
 .body {
     .guitars {
         background: rgba(0, 0, 0, 0.753);
-        width: 99vw;
+        width: 100%;
 
         h1 {
             font-size: 2rem;
@@ -15,12 +15,22 @@
         }
 
         .text-container {
-            width: 1200px;
+            width: 70%;
             margin: 0 auto;
             padding-bottom: 50px;
 
             p {
                 margin: 20px 0;
+
+                a {
+                    color: grey;
+                    text-decoration: none;
+                    transition: 0.4s;
+
+                    &:hover {
+                        color: white;
+                    }
+                }
             }
         }
 
@@ -28,6 +38,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
             max-width: 1200px;
             margin: 0 auto;
 

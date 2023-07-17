@@ -205,18 +205,6 @@ const QuoteForm = () => {
         return { isValid, errors };
     };
 
-    // const handlePhoneNumberChange = (e) => {
-    //     const newPhoneNumber = e.target.value;
-    //     setPhoneNumber(newPhoneNumber);
-
-    //     const phoneNumberObject = parsePhoneNumberFromString(newPhoneNumber);
-    //     if (phoneNumberObject && phoneNumberObject.isValid()) {
-    //         setPhoneNumberError(false);
-    //     } else {
-    //         setPhoneNumberError(true);
-    //     }
-    // };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 

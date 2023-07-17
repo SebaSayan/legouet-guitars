@@ -1,7 +1,7 @@
 .body {
     .contact {
         background: rgba(0, 0, 0, 0.753);
-        width: 99vw;
+        width: 100%;
 
         p {
             width: 1200px;
@@ -18,8 +18,7 @@
         .container {
             display: flex;
             justify-content: center;
-            width: 1200px;
-            margin: 0 auto;
+            width: 100%;
 
             .address {
                 width: 500px;
@@ -28,11 +27,21 @@
 
                 p {
                     margin: 20px 0;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        transition: 0.4s;
+
+                        &:hover {
+                            color: grey
+                        }
+                    }
                 }
             }
 
             .form-contact {
-                width: 500px;
+                width: 800px;
                 margin: 0 auto;
 
                 h2 {

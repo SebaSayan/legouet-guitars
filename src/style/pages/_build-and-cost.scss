@@ -1,7 +1,7 @@
 .body {
     .build-and-cost {
         background: rgba(0, 0, 0, 0.753);
-        width: 99vw;
+        width: 100%;
 
         h1 {
             font-size: 2rem;
@@ -32,6 +32,16 @@
 
                 h3 {
                     margin: 20px 0;
+
+                    a {
+                        color: grey;
+                        text-decoration: none;
+                        transition: 0.4s;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
                 }
 
                 ul {
@@ -48,6 +58,16 @@
 
                         .icon {
                             color: rgb(0, 255, 0);
+                        }
+
+                        a {
+                            color: grey;
+                            text-decoration: none;
+                            transition: 0.4s;
+
+                            &:hover {
+                                color: black;
+                            }
                         }
 
                         &:hover {
@@ -81,7 +101,7 @@
 
     .online-quote {
         background: rgba(0, 0, 0, 0.753);
-        width: 99vw;
+        width: 100%;
 
         h2 {
             font-size: 2rem;

@@ -97,8 +97,10 @@ const Guitars = () => {
                     <p>Cette guitare permet de réaliser toutes les rythmiques métal les plus techniques, sa structure rigide lui confère une grande stabilité ainsi qu'une dynamique impresionnante.</p>
                     <p>Possibilité de jouer dans un registre blues rock grâce à ses micros passifs au niveau de sortie modérée ( un vrai "couteau suisse").</p>
                     <p>Poids = 3.350 Kg</p>
-                    <p>https://www.youtube.com/watch?v=3kcbSFx1Fsk</p>
-                    <p>https://www.youtube.com/watch?v=X50Eji4G91A&t=416s</p>
+                    <div style={{ display: "flex", justifyContent: 'center', width: '640px', gap: '10px', flexWrap: 'wrap', margin: '0 auto' }}>
+                        <ReactPlayer url="https://www.youtube.com/watch?v=3kcbSFx1Fsk" controls={true} />
+                        <ReactPlayer url="https://www.youtube.com/watch?v=X50Eji4G91A&t=416s" controls={true} />
+                    </div>
                 </div>
                 <h2>Studio</h2>
                 <div className="img-container">
@@ -188,8 +190,10 @@ const Guitars = () => {
                     <p>Corps en titane taillé dans la masse, vernis, cordier standard avec pontet en bronze, un manche en érable teinté noir, des repères en nacre blanc, des micros DI MARZIO Joe dupalntier, 1 volume , 1 tone et bouton aluminium.</p>
                     <p>Une merveille esthétique et sonore qui ne peut laisser indifférent.</p>
                     <p>Poids = 3.340 Kg</p>
-                    <p>https://www.youtube.com/watch?v=kVqpNewlAY8</p>
-                    <p>https://youtu.be/eUPjFY5QshY</p>
+                    <div style={{ display: "flex", justifyContent: 'center', width: '640px', gap: '10px', flexWrap: 'wrap', margin: '0 auto' }}>
+                        <ReactPlayer url="https://www.youtube.com/watch?v=kVqpNewlAY8" controls={true} />
+                        <ReactPlayer url="https://youtu.be/eUPjFY5QshY" controls={true} />
+                    </div>
                 </div>
                 <h2>ULTIME</h2>
                 <div className="img-container">
