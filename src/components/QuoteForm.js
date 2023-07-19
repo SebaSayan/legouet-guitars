@@ -29,6 +29,8 @@ const QuoteForm = () => {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
 
+    const [material, setMaterial] = useState("");
+
     useEffect(() => {
         if (phoneNumber) {
             setIsValid(isValidNumber(phoneNumber));
@@ -141,6 +143,10 @@ const QuoteForm = () => {
             (isNaN(pricePart5) ? 0 : pricePart5);
 
         setResult(total);
+    }
+
+    const handleMaterialChange = (event) => {
+        setMaterial(event.target.value);
     }
 
     const handlePart1Change = (event) => {
@@ -292,65 +298,90 @@ const QuoteForm = () => {
         }
     };
 
-
     return (
         <form onSubmit={handleSubmit}>
             <div className='form-cart'>
                 <h3>Classe Corps</h3>
-                <label className={selectedOption1 === "option1Price" ? "selected" : ""}>
-                    Corps aluminium vernis mat ou brillant avec motif usinage apparent (1368€)
+                <label>
+                    Aluminium
                     <input
                         type="radio"
-                        value="option1Price"
-                        checked={part1Value === "option1Price"}
-                        onChange={handlePart1Change}
+                        value="aluminium"
+                        checked={material === "aluminium"}
+                        onChange={handleMaterialChange}
                     />
                 </label>
-                <label className={selectedOption1 === "option2Price" ? "selected" : ""}>
-                    Corps aluminium peinture et vernis selon gamme RAL Design (1656€)
+                <label>
+                    Titane
                     <input
                         type="radio"
-                        value="option2Price"
-                        checked={part1Value === "option2Price"}
-                        onChange={handlePart1Change}
+                        value="titane"
+                        checked={material === "titane"}
+                        onChange={handleMaterialChange}
                     />
                 </label>
-                <label className={selectedOption1 === "option3Price" ? "selected" : ""}>
-                    Corps aluminium vernis coloré avec motif usinage apparent (1656€)
-                    <input
-                        type="radio"
-                        value="option3Price"
-                        checked={part1Value === "option3Price"}
-                        onChange={handlePart1Change}
-                    />
-                </label>
-                <label className={selectedOption1 === "option4Price" ? "selected" : ""} >
-                    Corps aluminium traitement Cerakote (1656€)
-                    <input
-                        type="radio"
-                        value="option4Price"
-                        checked={part1Value === "option4Price"}
-                        onChange={handlePart1Change}
-                    />
-                </label>
-                <label className={selectedOption1 === "option5Price" ? "selected" : ""}>
-                    Corps titane vernis (6120€)
-                    <input
-                        type="radio"
-                        value="option5Price"
-                        checked={part1Value === "option5Price"}
-                        onChange={handlePart1Change}
-                    />
-                </label>
-                <label className={selectedOption1 === "option6Price" ? "selected" : ""}>
-                    Corps titane traitement Cerakote (6120€)
-                    <input
-                        type="radio"
-                        value="option6Price"
-                        checked={part1Value === "option6Price"}
-                        onChange={handlePart1Change}
-                    />
-                </label>
+                {material === "aluminium" && (
+                    <div className='form-cart'>
+                        <label className={selectedOption1 === "option1Price" ? "selected" : ""}>
+                            Corps aluminium vernis mat ou brillant avec motif usinage apparent (1368€)
+                            <input
+                                type="radio"
+                                value="option1Price"
+                                checked={part1Value === "option1Price"}
+                                onChange={handlePart1Change}
+                            />
+                        </label>
+                        <label className={selectedOption1 === "option2Price" ? "selected" : ""}>
+                            Corps aluminium peinture et vernis selon gamme RAL Design (1656€)
+                            <input
+                                type="radio"
+                                value="option2Price"
+                                checked={part1Value === "option2Price"}
+                                onChange={handlePart1Change}
+                            />
+                        </label>
+                        <label className={selectedOption1 === "option3Price" ? "selected" : ""}>
+                            Corps aluminium vernis coloré avec motif usinage apparent (1656€)
+                            <input
+                                type="radio"
+                                value="option3Price"
+                                checked={part1Value === "option3Price"}
+                                onChange={handlePart1Change}
+                            />
+                        </label>
+                        <label className={selectedOption1 === "option4Price" ? "selected" : ""} >
+                            Corps aluminium traitement Cerakote (1656€)
+                            <input
+                                type="radio"
+                                value="option4Price"
+                                checked={part1Value === "option4Price"}
+                                onChange={handlePart1Change}
+                            />
+                        </label>
+                    </div>
+                )}
+                {material === "titane" && (
+                    <div className='form-cart'>
+                        <label className={selectedOption1 === "option5Price" ? "selected" : ""}>
+                            Corps titane vernis (6120€)
+                            <input
+                                type="radio"
+                                value="option5Price"
+                                checked={part1Value === "option5Price"}
+                                onChange={handlePart1Change}
+                            />
+                        </label>
+                        <label className={selectedOption1 === "option6Price" ? "selected" : ""}>
+                            Corps titane traitement Cerakote (6120€)
+                            <input
+                                type="radio"
+                                value="option6Price"
+                                checked={part1Value === "option6Price"}
+                                onChange={handlePart1Change}
+                            />
+                        </label>
+                    </div>
+                )}
             </div>
             <div className='form-cart'>
                 <h3>Classe ACCASTILLAGE ET VIBRATOS</h3>
