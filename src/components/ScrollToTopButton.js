@@ -25,7 +25,7 @@ const ScrollToTopButton = () => {
         <div className="scroll-to-top">
             {visible && (
                 <div onClick={scrollToTop} style={styles}>
-                    <p>➜</p>
+                    <p style={stylesIcon}>➜</p>
                 </div>
             )}
         </div>
@@ -50,5 +50,9 @@ const styles = {
     alignItems: 'center',
     zIndex: 1000,
 };
+
+const stylesIcon = {
+    transform: 'translateY(-3px)'
+}
 
 export default ScrollToTopButton;

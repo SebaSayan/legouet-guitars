@@ -11,13 +11,21 @@ footer {
 
         @media screen and (max-width: 670px) {
             height: 240px;
-            width: 520px;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 540px) {
+            height: 200px;
+        }
+
+        @media screen and (max-width: 540px) {
+            height: 130px;
         }
     }
 
     .footer-item {
         display: flex;
-        width: 500px;
+        width: 100%;
         margin: 10px auto;
 
         .footer-ico {
