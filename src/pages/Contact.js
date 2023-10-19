@@ -172,7 +172,7 @@ const Contact = () => {
                                             title="Cochez cette case pour accepter les conditions générales d'utilisation"
                                         />
                                         <label htmlFor="checkbox">J'ai lu et j'accepte
-                                            <NavLink to="/confidentialite"> les conditions générales d'utilisation </NavLink></label>
+                                            <NavLink to="/confidentialite">les conditions générales d'utilisation </NavLink></label>
                                     </div>
                                     <div className="check-card">
                                         <input

@@ -669,7 +669,7 @@ const QuoteForm = () => {
                 <textarea
                     id="message"
                     value={message}
-                    placeholder="Message(facultatif)"
+                    placeholder="Message (facultatif)"
                     onChange={(e) => setMessage(e.target.value)}
                 />
                 <div className='check'>

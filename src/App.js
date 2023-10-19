@@ -13,6 +13,7 @@ import GuitarStudio from "./pages/guitars/GuitarStudio";
 import GuitarRock from "./pages/guitars/GuitarRock";
 import GuitarSupreme from "./pages/guitars/GuitarSupreme";
 import GuitarUltime from "./pages/guitars/GuitarUltime";
+import GuitarCamoBlue from "./pages/guitars/GuitarCamoBlue";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/guitares/rock" element={<GuitarRock />} />
         <Route path="/guitares/supreme" element={<GuitarSupreme />} />
         <Route path="/guitares/ultime" element={<GuitarUltime />} />
+        <Route path="/guitares/camo-blue" element={<GuitarCamoBlue />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route path="/confidentialite" element={<Confidentiality />} />
