@@ -8,7 +8,7 @@ const Confidentiality = () => {
             <Header />
             <div className="confidentiality">
                 <div className="container">
-                    <h1>politique de confidentialité</h1>
+                    <h1>Politique de confidentialité</h1>
                     <h2>Art.1 Règles de confidentialité</h2>
                     <p>Le règlement général sur la protection des données du 27 avril 2016 ( ci-après le RGPD, ce qui signifie le General Data Protection Regulation) est d’application à partir du 25 mai 2018. Il impose des règles et conditions strictes aux entreprises et commerçants dans le cadre du traitement des données à caractère personnel de leurs clients et prospects, et ce afin de protéger la vie privée de ceux-ci.</p>
                     <p>A travers la présente, nous entendons vous communiquer des informations claires et précises concernant le traitement de vos données à caractère personnel.</p>

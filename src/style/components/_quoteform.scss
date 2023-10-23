@@ -24,10 +24,23 @@ form {
                 color: black;
             }
 
-            input[type='radio'] {
-                display: none;
-            }
+
         }
+
+        input[type='radio'] {
+            display: none;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .manche-alu {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
     }
 
     .contact {

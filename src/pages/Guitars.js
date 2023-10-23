@@ -6,6 +6,7 @@ import imgRock3 from '../assets/img/img_0069.jpg';
 import imgSupreme1 from '../assets/img/img_0001.jpg';
 import imgUltime1 from '../assets/img/img_0007.jpg';
 import imgCamoBlue1 from '../assets/img/img_0003.jpg';
+import imgIronPlague1 from '../assets/img/img_0025.jpg';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { NavLink } from 'react-router-dom';
@@ -18,6 +19,7 @@ const Guitars = () => {
     const altSupreme = 'Guitare Suprême en titane';
     const altUltime = 'Guitare ULTIME corps en titane et manche aluminium vernis';
     const altCamoBlue = 'Guitare Camo Blue';
+    const altIronPlague = 'Guitare Iron Plague noire';
     return (
         <div className="body">
             <Header />
@@ -87,6 +89,15 @@ const Guitars = () => {
                         className='card'
                         src={imgCamoBlue1}
                         alt={altCamoBlue}
+                    />
+                    </NavLink>
+                </div>
+                <h2>Iron Plague</h2>
+                <div className="img-container">
+                    <NavLink to="/guitares/iron-plague"><img
+                        className='card'
+                        src={imgIronPlague1}
+                        alt={altIronPlague}
                     />
                     </NavLink>
                 </div>
