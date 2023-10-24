@@ -28,78 +28,111 @@ const Guitars = () => {
                 <div className='text-container'>
                     <p>Découvrez en image et vidéo nos guitares électriques conçues dans notre atelier. Des guitares pour professionnels en aluminium mais aussi en titane personnalisées et fabriquées sur mesure. </p>
                 </div>
-                <h2>Jazz Fusion</h2>
-                <div className="img-container">
+                <div className="img-container guitar-card">
+                    <h2>Jazz Fusion</h2>
                     <NavLink to="/guitares/jazz-fusion"><img
                         className='card'
                         src={imgJazzFusion3}
                         alt={altJazzFusion}
                     />
                     </NavLink>
+                    <div className='price-plus'>
+                        <p>3227 € TTC</p>
+                        <NavLink to="/guitares/jazz-fusion">Voir plus</NavLink>
+                    </div>
+
                 </div>
-                <h2>Métal précision</h2>
-                <div className="img-container">
+                <div className="img-container guitar-card">
+                    <h2>Métal précision</h2>
                     <NavLink to="/guitares/metal-precision"><img
                         className='card'
                         src={imgMetalPrecision1}
                         alt={altMetalPrecision}
                     />
                     </NavLink>
+                    <div className="price-plus">
+                        <p>4018 € TTC</p>
+                        <NavLink to="/guitares/metal-precision">Voir plus</NavLink>
+                    </div>
                 </div>
-                <h2>Studio</h2>
-                <div className="img-container">
+                <div className="img-container guitar-card">
+                    <h2>Studio</h2>
                     <NavLink to="/guitares/studio"><img
                         className='card'
                         src={imgStudio3}
                         alt={altStudio}
                     />
                     </NavLink>
+                    <div className="price-plus">
+                        <p>4317 € TTC</p>
+                        <NavLink to="/guitares/studio">Voir plus</NavLink>
+                    </div>
                 </div>
-                <h2>Rock</h2>
-                <div className="img-container">
+                <div className="img-container guitar-card">
+                    <h2>Rock</h2>
                     <NavLink to="/guitares/rock"><img
                         className='card'
                         src={imgRock3}
                         alt={altRock}
                     />
                     </NavLink>
+                    <div className="price-plus">
+                        <p>3860 € TTC</p>
+                        <NavLink to="/guitares/rock">Voir plus</NavLink>
+                    </div>
                 </div>
-                <h2>Suprême</h2>
-                <div className="img-container">
+                <div className="img-container guitar-card">
+                    <h2>Suprême</h2>
                     <NavLink to="/guitares/supreme"><img
                         className='card'
                         src={imgSupreme1}
                         alt={altSupreme}
                     />
                     </NavLink>
+                    <div className="price-plus">
+                        <p>7575 € TTC</p>
+                        <NavLink to="/guitares/surpeme">Voir plus</NavLink>
+                    </div>
                 </div>
 
-                <h2>ULTIME</h2>
-                <div className="img-container">
+                <div className="img-container guitar-card">
+                    <h2>ULTIME</h2>
                     <NavLink to="/guitares/ultime"><img
                         className='card'
                         src={imgUltime1}
                         alt={altUltime}
                     />
                     </NavLink>
+                    <div className="price-plus">
+                        <p>8437 € TTC</p>
+                        <NavLink to="/guitares/ultime">Voir plus</NavLink>
+                    </div>
                 </div>
-                <h2>Camo Blue</h2>
-                <div className="img-container">
+                <div className="img-container guitar-card">
+                    <h2>Camo Blue</h2>
                     <NavLink to="/guitares/camo-blue"><img
                         className='card'
                         src={imgCamoBlue1}
                         alt={altCamoBlue}
                     />
                     </NavLink>
+                    <div className="price-plus">
+                        <p>3982 € TTC</p>
+                        <NavLink to="/guitares/camo-blue">Voir plus</NavLink>
+                    </div>
                 </div>
-                <h2>Iron Plague</h2>
-                <div className="img-container">
+                <div className="img-container guitar-card">
+                    <h2>Iron Plague</h2>
                     <NavLink to="/guitares/iron-plague"><img
                         className='card'
                         src={imgIronPlague1}
                         alt={altIronPlague}
                     />
                     </NavLink>
+                    <div className="price-plus">
+                        <p>4054 € TTC</p>
+                        <NavLink to="/guitares/iron-plague">Voir plus</NavLink>
+                    </div>
                 </div>
             </section >
             <Footer />

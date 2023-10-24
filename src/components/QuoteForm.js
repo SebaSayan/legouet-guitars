@@ -59,7 +59,7 @@ const QuoteForm = () => {
         optionHPrice: "245",
         // optionIPrice: "245",
         // optionJPrice: "375",
-        optionKPrice: "325",
+        // optionKPrice: "325",
         optionLPrice: "218",
 
         // Classe MICROS
@@ -104,7 +104,7 @@ const QuoteForm = () => {
         optionHPrice: "Cordier inox pontet titane",
         // optionIPrice: "Floyd rose non fine tuner",
         // optionJPrice: "Floyd rose",
-        optionKPrice: "Vegatrem",
+        // optionKPrice: "Vegatrem",
         optionLPrice: "Schaller Vintage Tremolo C",
 
         // Classe MICROS
@@ -223,10 +223,10 @@ const QuoteForm = () => {
         }
 
         let htmlContentAdmin = `<p>Bonjour, un client a validé le devis en ligne. Voici le contenu de celui-ci :</p>
-            <p>${name}</p>
-            <p>${email}</p>
-            <p>${phoneNumber}</p>
-            <p>${message}</p>`;
+            <p>Nom : ${name}</p>
+            <p>Mail : ${email}</p>
+            <p>Tel : ${phoneNumber}</p>
+            <p>Message : ${message}</p>`;
         let htmlContentClient = `<p>Bonjour ${name}, voici votre demande de devis.</p>
             <p>Après vérification par un administrateur, vous recevrez un nouvel email contenant un devis officiel valable 30 jours à compter de la réception de celui-ci.</p>`;
 
@@ -284,11 +284,20 @@ const QuoteForm = () => {
 
             setName("");
             setEmail("");
+            setPhoneNumber("");
             setMessage("");
             setErrorForm({});
+            setSelectedOption1(null);
+            setSelectedOption2(null);
+            setSelectedOption3(null);
+            setSelectedOption4(null);
+            setSelectedOption5(null);
             setIsCheckedConf(false);
             setIsCheckedBot(false);
-            setSendMail("Votre message a été envoyé avec succès !");
+            setSendMail("Votre message a été envoyé avec succès ! Vous allez recevoir un e-mail de confirmation. En cas de non-réception, veuillez vérifier vos courriers indésirables.");
+            setTimeout(() => {
+                setSendMail("");
+            }, 5000);
         } catch (error) {
             console.error(error);
             setErrorForm({});
@@ -661,7 +670,7 @@ const QuoteForm = () => {
                 />
             </fieldset>
             <fieldset className='form-cart'>
-                <legend>Classe ETUIS</legend>
+                <legend>ETUIS</legend>
                 <label htmlFor='option1EtuiPrice' className={selectedOption5 === "option1EtuiPrice" ? "selected" : ""}>
                     <span>Etui Hiscox Case (215€)</span>
                 </label>
@@ -673,7 +682,8 @@ const QuoteForm = () => {
                     onChange={handlePart5Change}
                 />
             </fieldset>
-            <div className="form-cart contact">
+            <fieldset className="form-cart contact">
+                <legend>CONTACT</legend>
                 <input
                     type="text"
                     id="name"
@@ -730,7 +740,7 @@ const QuoteForm = () => {
                         />  <label htmlFor="checkbox-bot">Je ne suis pas un robot</label>
                     </div>
                 </div>
-            </div>
+            </fieldset>
             <div className="bottom-form">
                 <p>
                     {Object.values(errorForm).length > 0

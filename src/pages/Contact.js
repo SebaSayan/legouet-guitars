@@ -68,10 +68,10 @@ const Contact = () => {
         }
 
         let htmlContent = `<p>Bonjour, un client a un message "Contact". Voici le contenu de celui-ci :</p>
-            <p>${name}</p>
-            <p>${email}</p>
-            <p>${phoneNumber}</p>
-            <p>${message}</p>`;
+            <p>Nom : ${name}</p>
+            <p>Email : ${email}</p>
+            <p>Tel : ${phoneNumber}</p>
+            <p>Message : ${message}</p>`;
 
 
         try {
@@ -95,11 +95,15 @@ const Contact = () => {
             console.log(response);
             setName("");
             setEmail("");
+            setPhoneNumber("");
             setMessage("");
             setErrorForm({});
             setIsCheckedConf(false);
             setIsCheckedBot(false);
             setSendMail("Votre message a été envoyé avec succès !");
+            setTimeout(() => {
+                setSendMail("");
+            }, 5000);
         } catch (error) {
             console.error(error);
             setErrorForm({});

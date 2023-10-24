@@ -36,7 +36,7 @@ const Home = () => {
                     <p>La prise en compte des techniques de jeu actuelles rime avec un confort et une maniabilité accrus, une impression ressentie avec nos instruments dès la première prise en main.</p>
                 </div>
             </section>
-            <section className='build-and-cost'>
+            <section className='caracteristiques'>
                 <h1>Fabrication de guitares personnalisés</h1>
                 <div className="container">
                     <div className="cart">

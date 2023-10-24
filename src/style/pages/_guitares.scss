@@ -14,10 +14,6 @@
             padding-top: 50px;
         }
 
-        h2 {
-            text-align: center;
-        }
-
         .text-container {
             width: 70%;
             margin: 0 auto;
@@ -42,6 +38,19 @@
             }
         }
 
+        .guitar-card {
+            flex-direction: column;
+            width: 380px;
+
+            &::after {
+                content: "";
+                background: grey;
+                height: 2px;
+                width: 100%;
+                margin: 20px 0;
+            }
+        }
+
         .img-container {
             display: flex;
             justify-content: center;
@@ -50,9 +59,35 @@
             max-width: 1200px;
             margin: 0 auto;
 
+            h2 {
+                text-align: center;
+            }
+
             .card {
                 width: 350px;
                 margin: 15px;
+            }
+
+            .price-plus {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+
+                p {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+
+                a {
+                    color: grey;
+                    font-size: 1.2rem;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: rgb(255, 255, 255);
+                        text-decoration: underline;
+                    }
+                }
             }
         }
     }

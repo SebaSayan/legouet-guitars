@@ -24,4 +24,104 @@
             }
         }
     }
+
+    .caracteristiques {
+        background: rgba(0, 0, 0, 0.753);
+        width: 100%;
+
+        h1 {
+            font-size: 2rem;
+            margin: 85px 0 100px;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+
+            .cart {
+                background: rgba(0, 0, 0, 0.5);
+                border: 1px solid grey;
+                width: 500px;
+                margin: 0 10px;
+                margin-bottom: 20px;
+                padding: 20px 10px;
+
+                h2 {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+                h3 {
+                    margin: 20px 0;
+
+                    a {
+                        color: grey;
+                        text-decoration: none;
+                        transition: 0.4s;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        margin-bottom: 10px;
+                        transition: 0.4s;
+
+                        .icon,
+                        .red-icon {
+                            transition: 0.4s
+                        }
+
+                        .icon {
+                            color: rgb(0, 255, 0);
+                        }
+
+                        a {
+                            color: grey;
+                            text-decoration: none;
+                            transition: 0.4s;
+
+                            &:hover {
+                                color: black;
+                            }
+                        }
+
+                        &:hover {
+                            color: black;
+                            background: rgb(214, 214, 214);
+
+                            .icon {
+                                color: black;
+                            }
+                        }
+                    }
+
+                    .red-list {
+                        &:hover {
+                            background: red;
+                            color: white;
+
+                            .red-icon {
+                                color: white;
+                            }
+                        }
+
+                        .red-icon {
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
