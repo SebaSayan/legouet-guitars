@@ -1,6 +1,42 @@
 .body {
+    text-align: center;
+
     .artistes {
         background: rgba(0, 0, 0, 0.753);
+        padding: 20px 0 20px 0;
         width: 100%;
+
+        h2 {
+            margin: 20px 0 20px 0;
+
+            .logoWeb {
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
+
+                img {
+                    margin-right: 5px;
+                }
+            }
+
+            img {
+                margin-top: 20px;
+            }
+
+        }
+
+
+        .imgArtist {
+            padding-bottom: 20px;
+        }
+
+        img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
     }
 }

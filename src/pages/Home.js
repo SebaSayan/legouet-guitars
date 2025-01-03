@@ -1,134 +1,142 @@
 import React from 'react';
-import Modal from 'react-modal';
+import imgJazzFusion3 from '../assets/img/img_0040.jpg';
+import imgMetalPrecision1 from '../assets/img/img_5736.jpg';
+import imgStudio3 from '../assets/img/img_0031.jpg';
+import imgRock3 from '../assets/img/img_0069.jpg';
+import imgSupreme1 from '../assets/img/img_0001.jpg';
+import imgUltime1 from '../assets/img/img_0007.jpg';
+import imgCamoBlue1 from '../assets/img/img_0003.jpg';
+import imgIronPlague1 from '../assets/img/img_0025.jpg';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import imgMancheAlu from '../assets/img/manche-alu.jpg';
-import imgMancheBois from '../assets/img/manche-bois.jpg';
-import imgMancheAlu2 from '../assets/img/manche-alu2.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
-    const [selectedAlt, setSelectedAlt] = useState(null);
-    const altMancheAlu = 'Manche de guitare en aluminium';
-    const altMancheAlu2 = 'Manches de guitare en aluminium';
-    const altMancheBois = 'Manche de guitare en bois';
-
-    const handleOpenModal = (image, alt) => {
-        setSelectedImage(image);
-        setSelectedAlt(alt);
-        setModalIsOpen(true);
-    }
+    const altJazzFusion = 'Guitare Jazz Fusion rouge';
+    const altMetalPrecision = 'Guitare Metal précision';
+    const altStudio = 'Guitare Studio Blanche';
+    const altRock = 'Guitare Rock Gold';
+    const altSupreme = 'Guitare Suprême en titane';
+    const altUltime = 'Guitare ULTIME corps en titane et manche aluminium vernis';
+    const altCamoBlue = 'Guitare Camo Blue';
+    const altIronPlague = 'Guitare Iron Plague noire';
     return (
         <div className="body">
             <Header />
-            <section className='home'>
-                <h1><strong>Fabrication  française</strong> de guitares électriques en aluminium.</h1>
+            <section className='guitars'>
+                <h1>Nos guitares électriques</h1>
                 <div className='text-container'>
-                    <p>Spécialiste en fabrication de <strong>guitares en titane, guitare en aluminium, manches en aluminium et d'accastillage titane</strong>, notre objectif est de répondre aux attentes du guitariste professionnel et de l'amateur passionné le plus exigeant, en visant une qualité supérieure.</p>
-                    <p>La particularité des guitares que nous réalisons réside dans la combinaison de superalliages de métaux entièrement <strong>usinés dans la masse.</strong> Il n'y a aucune soudure.</p>
-                    <p>Cette réalisation est permise par notre maîtrise des techniques d'usinage, acquise et validée auprès de plusieurs secteurs de pointe de l'industrie, notamment l'aéronautique.</p>
-                    <p>Ce savoir-faire rigoureux, appliqué à des métaux sélectionnés pour leurs propriétés mécaniques et acoustiques, a été la base d'une production de modèles aux qualités sonores spécifiques et aux potentialités élargies.</p>
-                    <p>De plus, une passion pour le monde de la guitare dans toutes ses facettes nous permet de rester dans une tradition de lutherie moderne.</p>
-                    <p>La prise en compte des techniques de jeu actuelles rime avec un confort et une maniabilité accrus, une impression ressentie avec nos instruments dès la première prise en main.</p>
+                    <p>Découvrez en image et vidéo nos guitares électriques conçues dans notre atelier. Des guitares pour professionnels en aluminium mais aussi en titane personnalisées et fabriquées sur mesure. </p>
                 </div>
-            </section>
-            <section className='caracteristiques'>
-                <h1>Fabrication de guitares personnalisés</h1>
-                <div className="container">
-                    <div className="cart">
-                        <h2>Caractéristiques générales</h2>
-                        <ul>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Design unique et configurations multiples.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Disponible pour gauchers sans tarification supplémentaire.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Corps, manches et accastillage entièrement usinés dans la masse dans nos ateliers.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Conception, assemblage et mise au point dans nos ateliers.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Micros élaborés et fabriqués en France.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Sillet et string retainer usinés en bronze pour une meilleure tenue d'accord.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Diapason de 25.5 pouces et radius du manche de 14 pouces.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Guitares équipées <a href="https://www.jimdunlop.com/straplok-strap-retainers-dual-design-nickel/" target="_blank" rel="noopener noreferrer">d'attache-courroie "Strap lock"</a> et de <a href="http://www.sperzel.com/colors-finishes.php" target="_blank" rel="noopener noreferrer">mécaniques Sperzel 6X6</a>.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Finitions de peinture et vernis au choix selon la gamme <a href="https://www.couleursral.fr/ral-design" target="_blank" rel="noopener noreferrer">Ral Design</a>.</li>
-                        </ul>
+                <div className="img-container guitar-card">
+                    <h2>Jazz Fusion</h2>
+                    <NavLink to="/guitares/jazz-fusion"><img
+                        className='card'
+                        src={imgJazzFusion3}
+                        alt={altJazzFusion}
+                    />
+                    </NavLink>
+                    <div className='price-plus'>
+                        <p>3227 € TTC</p>
+                        <NavLink to="/guitares/jazz-fusion">Voir plus</NavLink>
                     </div>
-                    <div className="cart">
-                        <h2>Technologie de nos manches</h2>
-                        <h3>Le manche "Infinite" usiné en <a href="https://www.thyssenkrupp-materials.ch/fr/downloads/fiches-techniques-aluminium" target="_blank" rel="noopener noreferrer">aluminium 6082</a> avec une touche inox rapportée</h3>
-                        <ul>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Planimétrie rigoureuse.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Poids = 790 grammes (le plus léger du monde).</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Robustesse (aucun risque de casser le manche pendant le transport).</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Spectre sonore élargi.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Frettes de haute longévité grâce à leur matière fortement alliée, riche en chrome et en nickel (l'alliage des frettes en inox standard est plus ductile et tendre afin d'être travaillé par un luthier traditionnel).</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Ne nécessite aucun réglage.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Stabilité exceptionnelle.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Friction réduite entre la corde et la frette.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Dynamique accrue.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Aucune oxydation.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Frettes de 1.6 mm de hauteur, usinées dans la touche (de nombreuses planimétries possibles).</li>
-                            {/* <li className='red-list'><FontAwesomeIcon className='red-icon' icon={faXmark} /> Les frettes ne peuvent pas être remplacées.</li> */}
-                        </ul>
-                        <img
-                            src={imgMancheAlu}
-                            alt={altMancheAlu}
-                            onClick={() => handleOpenModal(imgMancheAlu, altMancheAlu)}
-                            style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
-                        />
-                    </div>
-                    <div className="cart">
-                        <h2>Le manche en aluminium "Light Weight", réalisé avec la même nuance d'aluminium, comporte une touche en aluminium et des frettes rapportées</h2>
-                        <ul>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Poids : 800 grammes (hors mécaniques).</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Pas de truss rod.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Sustain accru.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Frettes en inox Jescar (1.19 x 2.64 mm).</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Possibilité de refrettage.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Stabilité exceptionnelle.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Tête de manche incassable.</li>
-                        </ul>
-                        <img
-                            src={imgMancheAlu2}
-                            alt={altMancheAlu2}
-                            onClick={() => handleOpenModal(imgMancheAlu2, altMancheAlu2)}
-                            style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
-                        />
-                    </div>
-                    <div className="cart">
-                        <h2>Le Manche en Bois</h2>
-                        <ul>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Plusieurs essences de bois disponibles.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Poids moyen : 550g.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Les manches sont réalisés en une seule pièce (type Fender vintage).</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Possibilité d'avoir une touche rapportée.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Truss Rod double action de type Music Man.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Frettes en inox de type medium jumbo.</li>
-                            <li><FontAwesomeIcon className='icon' icon={faCheck} /> Vernis satiné pour une meilleure glisse.</li>
-                        </ul>
-                        <img
-                            src={imgMancheBois}
-                            alt={altMancheBois}
-                            onClick={() => handleOpenModal(imgMancheBois, altMancheBois)}
-                            style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
-                        />
-                        <Modal
-                            isOpen={modalIsOpen}
-                            onRequestClose={() => setModalIsOpen(false)}
-                            contentLabel="Image Modal"
-                        >
-                            <img
-                                src={selectedImage}
-                                alt={selectedAlt}
-                                onClick={() => setModalIsOpen(false)}
-                                style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
-                            />
-                        </Modal>
+
+                </div>
+                <div className="img-container guitar-card">
+                    <h2>Métal précision</h2>
+                    <NavLink to="/guitares/metal-precision"><img
+                        className='card'
+                        src={imgMetalPrecision1}
+                        alt={altMetalPrecision}
+                    />
+                    </NavLink>
+                    <div className="price-plus">
+                        <p>4018 € TTC</p>
+                        <NavLink to="/guitares/metal-precision">Voir plus</NavLink>
                     </div>
                 </div>
-            </section>
+                <div className="img-container guitar-card">
+                    <h2>Studio</h2>
+                    <NavLink to="/guitares/studio"><img
+                        className='card'
+                        src={imgStudio3}
+                        alt={altStudio}
+                    />
+                    </NavLink>
+                    <div className="price-plus">
+                        <p>4317 € TTC</p>
+                        <NavLink to="/guitares/studio">Voir plus</NavLink>
+                    </div>
+                </div>
+                <div className="img-container guitar-card">
+                    <h2>Rock</h2>
+                    <NavLink to="/guitares/rock"><img
+                        className='card'
+                        src={imgRock3}
+                        alt={altRock}
+                    />
+                    </NavLink>
+                    <div className="price-plus">
+                        <p>3860 € TTC</p>
+                        <NavLink to="/guitares/rock">Voir plus</NavLink>
+                    </div>
+                </div>
+                <div className="img-container guitar-card">
+                    <h2>Suprême</h2>
+                    <NavLink to="/guitares/supreme"><img
+                        className='card'
+                        src={imgSupreme1}
+                        alt={altSupreme}
+                    />
+                    </NavLink>
+                    <div className="price-plus">
+                        <p>7575 € TTC</p>
+                        <NavLink to="/guitares/surpeme">Voir plus</NavLink>
+                    </div>
+                </div>
+
+                <div className="img-container guitar-card">
+                    <h2>ULTIME</h2>
+                    <NavLink to="/guitares/ultime"><img
+                        className='card'
+                        src={imgUltime1}
+                        alt={altUltime}
+                    />
+                    </NavLink>
+                    <div className="price-plus">
+                        <p>8437 € TTC</p>
+                        <NavLink to="/guitares/ultime">Voir plus</NavLink>
+                    </div>
+                </div>
+                <div className="img-container guitar-card">
+                    <h2>Camo Blue</h2>
+                    <NavLink to="/guitares/camo-blue"><img
+                        className='card'
+                        src={imgCamoBlue1}
+                        alt={altCamoBlue}
+                    />
+                    </NavLink>
+                    <div className="price-plus">
+                        <p>3982 € TTC</p>
+                        <NavLink to="/guitares/camo-blue">Voir plus</NavLink>
+                    </div>
+                </div>
+                <div className="img-container guitar-card">
+                    <h2>Iron Plague</h2>
+                    <NavLink to="/guitares/iron-plague"><img
+                        className='card'
+                        src={imgIronPlague1}
+                        alt={altIronPlague}
+                    />
+                    </NavLink>
+                    <div className="price-plus">
+                        <p>4054 € TTC</p>
+                        <NavLink to="/guitares/iron-plague">Voir plus</NavLink>
+                    </div>
+                </div>
+            </section >
             <Footer />
-        </div>
+        </div >
     );
 };
 

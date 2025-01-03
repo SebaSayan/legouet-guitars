@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import BuildAndCoast from "./pages/BuildAndCoast";
-import Guitars from "./pages/Guitars";
+// import BuildAndCoast from "./pages/BuildAndCoast";
+// import Guitars from "./pages/Guitars";
 import Contact from "./pages/Contact";
 import MentionsLegales from "./pages/MentionsLegales";
 import NotFound from "./pages/NotFound";
@@ -16,17 +16,18 @@ import GuitarUltime from "./pages/guitars/GuitarUltime";
 import GuitarCamoBlue from "./pages/guitars/GuitarCamoBlue";
 import GuitarIronPlague from "./pages/guitars/GuitarIronPlague";
 import Artistes from "./pages/Artistes";
+import APropos from "./pages/APropos";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/build-and-cost" element={<BuildAndCoast />} />
-        <Route path="/build-and-cost" element={<BuildAndCoast />} />
-        <Route path="/guitares" element={<Guitars />} />
+        {/* <Route path="/build-and-cost" element={<BuildAndCoast />} /> */}
+        {/* <Route path="/guitares" element={<Guitars />} /> */}
         <Route path="/artistes" element={<Artistes />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/a-propos" element={<APropos />} />
         <Route path="/guitares/jazz-fusion" element={<GuitarJazzFusion />} />
         <Route path="/guitares/metal-precision" element={<GuitarMetalPrecision />} />
         <Route path="/guitares/studio" element={<GuitarStudio />} />
