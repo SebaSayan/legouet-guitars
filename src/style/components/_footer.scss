@@ -1,4 +1,5 @@
 footer {
+    background: black;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -41,7 +42,6 @@ footer {
     }
 
     .footer-bottom {
-        background: black;
         text-align: center;
         padding: 10px 0;
 

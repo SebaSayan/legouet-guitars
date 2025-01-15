@@ -47,12 +47,12 @@ const Contact = () => {
 
         if (!isCheckedConf) {
             isValid = false;
-            errors.checkbox = "Veuillez confirmer les conditions d'utilisations";
+            errors.checkboxConf = "Veuillez confirmer les conditions d'utilisation";
         }
 
         if (!isCheckedBot) {
             isValid = false;
-            errors.checkbox = "Veuillez confirmer que vous n'êtes pas un robot.";
+            errors.checkboxBot = "Veuillez confirmer que vous n'êtes pas un robot.";
         }
 
         if (!isValid) {
@@ -73,7 +73,7 @@ const Contact = () => {
             return;
         }
 
-        let htmlContent = `<p>Bonjour, un client a un message "Contact". Voici le contenu de celui-ci :</p>
+        let htmlContent = `<p>Bonjour, un client vous a envoyé un message via la page "Contact". Voici le contenu de celui-ci :</p>
             <p>Nom : ${name}</p>
             <p>Email : ${email}</p>
             <p>Tel : ${phoneNumber}</p>
@@ -84,7 +84,7 @@ const Contact = () => {
                 "https://api.brevo.com/v3/smtp/email",
                 {
                     sender: { name, email },
-                    to: [{ email: "sebastien-1985@live.fr" }],
+                    to: [{ email: "joffrey@creawebdev.fr" }],
                     subject: "Message du formulaire Legouet Guitares - Administrateur",
                     htmlContent: htmlContent
                 },
@@ -92,7 +92,7 @@ const Contact = () => {
                     headers: {
                         Accept: "application/json",
                         "Content-Type": "application/json",
-                        "api-key": process.env.REACT_APP_SENDINGBLUE_EMAIL, // Clé API de Brevo (Env var)
+                        "api-key": process.env.REACT_APP_SENDINGBLUE_EMAIL, // Utilisation de la clé API dans une variable d'environnement
                     },
                 }
             );
@@ -180,8 +180,8 @@ const Contact = () => {
                                     defaultCountry="FR"
                                     required
                                 />
-                                {phoneNumber && (
-                                    <div>{isValid ? "" : "Le numéro de téléphone n'est pas valide."}</div>
+                                {phoneNumber && !isValid && (
+                                    <div style={{ color: 'red' }}>Le numéro de téléphone n'est pas valide.</div>
                                 )}
                                 <textarea
                                     id="message"
@@ -219,14 +219,15 @@ const Contact = () => {
                             </div>
                             <div className="bottom-form">
                                 <p>
-                                    {Object.values(errorForm).length > 0
-                                        ? Object.values(errorForm).map((error, index) => (
-                                            <span key={index}>
-                                                {error}
-                                                <br />
-                                            </span>
-                                        ))
-                                        : sendMail}
+                                    {Object.keys(errorForm).length > 0 ? (
+                                        <ul>
+                                            {Object.values(errorForm).map((error, index) => (
+                                                <li key={index}>{error}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        sendMail
+                                    )}
                                 </p>
                                 <button type="submit">Envoyer</button>
                             </div>

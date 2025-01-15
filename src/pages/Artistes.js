@@ -20,8 +20,8 @@ const Artistes = () => {
                         <NavLink to='https://azelmaofficial.com/' target='_blank' title='Ouvrir le site Azelma'><img src={LogoWWW} alt="Logo Internet" width={45} /></NavLink>
                     </div>
                 </h2>
-                <img className='imgArtist' src={Azelma1} alt="Romain Viale avec sa Legouet" />
-                <img className='imgArtist' src={Azelma2} alt="Arthur Valerioti avec sa Legouet" />
+                <img className='imgArtist azelma1' src={Azelma1} alt="Romain Viale avec sa Legouet" />
+                <img className='imgArtist azlema2' src={Azelma2} alt="Arthur Valerioti avec sa Legouet" />
 
                 <h2>Sebastien Gros
                     <div className='logoWeb'>
@@ -29,7 +29,7 @@ const Artistes = () => {
                         <NavLink to='http://www.coxinhellstudio.com/' target='_blank' title='Ouvrir le site CoxInHell'><img src={LogoWWW} alt="Logo Internet" width={45} /></NavLink>
                     </div>
                 </h2>
-                <img className='imgArtist' src={SebastienGros} alt="Sebastien Gros avec sa Legouet" />
+                <img className='imgArtist sebastienGros' src={SebastienGros} alt="Sebastien Gros avec sa Legouet" />
             </section>
             <Footer />
         </div>

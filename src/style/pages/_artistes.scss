@@ -1,7 +1,7 @@
 .body {
-    text-align: center;
 
     .artistes {
+        text-align: center;
         background: rgba(0, 0, 0, 0.753);
         padding: 20px 0 20px 0;
         width: 100%;
@@ -22,12 +22,12 @@
             img {
                 margin-top: 20px;
             }
-
         }
-
 
         .imgArtist {
             padding-bottom: 20px;
+            max-width: 100%;
+            height: auto;
         }
 
         img {
@@ -37,6 +37,17 @@
             flex-wrap: wrap;
             max-width: 1000px;
             margin: 0 auto;
+        }
+
+        @media (max-width: 1000px) {
+            .imgArtist.azelma1 {
+                content: url('../../assets/img/Azelma1Small.jpg');
+                width: 1000px;
+            }
+
+            .imgArtist.azlema2 {
+                content: url('../../assets/img/Azelma2Small.jpg');
+            }
         }
     }
 }
