@@ -16,22 +16,24 @@ const MentionsLegales = () => {
                     <p>Code APE : 2562B</p>
                     <p>N° TVA : FR 85402632442</p>
                     <p>Téléphone : 04 92 41 39 66</p>
-                    <p>Adresse de courrier électronique : <a href="mailto:contact@legouet-guitares.com">contact@legouet-guitares.com</a></p>
+                    <p>Adresse de courrier électronique : <a href="mailto:lf.ingenierie@wanadoo.fr">lf.ingenierie@wanadoo.fr</a></p>
                     <p>Directeur de la publication : Pierre POVIGNA</p>
                     <p>Responsable du site : Pierre POVIGNA</p>
                     <h2>Ce site est hébergé par :</h2>
-                    <p>N'est pas encore hébergé</p>
-                    <p>////////////////////////</p>
-                    <p>////////////////////////</p>
-                    <p>////////////////////////</p>
+                    <p>L'hébergeur du Site est la société PlanetHoster,</p>
+                    <p>dont le siège social est situé au 4416 Rue Louis B. Mayer,</p>
+                    <p>Laval,</p>
+                    <p>QUEBEC H7P 0G1,</p>
+                    <p>Canada,</p>
+                    <p>avec le numéro de téléphone : +33 1 76 60 41 43</p>
                     <h2>Conditions générales d'utilisation</h2>
                     <h3>Art. 1 Conditions d'utilisation</h3>
                     <p>Toute personne qui accède au site www.lf-industrie.com (ci-après le « Site ») s'engage à respecter les présentes conditions générales d'utilisation, qui pourront pour certains services être complétées par des conditions particulières. </p>
                     <p>L.F Industrie se réserve le droit de modifier et de mettre à jour à tout moment l'accès au Site ainsi que les présentes conditions d'utilisation. Ces modifications et mises à jour s'imposent à l'utilisateur qui doit en conséquence se référer régulièrement à cette rubrique pour vérifier les Conditions Générales en vigueur. </p>
                     <h3>Art. 2 Données personnelles et autres données </h3>
-                    <p>2.1 Les données sont exclusivement destinées à L.F Industrie, à ses filiales ou aux membres de son réseau commercial à des fins d’enquêtes, d’analyses, de communications institutionnelles, d’opérations relatives à la gestion clients ou, si vous en êtes d’accord, de propositions commerciales. Ces informations sont confidentielles et conservées par L.F Industrie, ses filiales et les membres de son réseau commercial. Conformément à la loi « Informatique et Libertés » du 06/01/78, vous disposez d'un droit d'accès, de rectification et de suppression de ces données ainsi que d’un droit de vous opposer à ce que ces données fassent l'objet d'un traitement en nous contactant par courrier à l’adresse suivante : Chemin des Sablières - 06100 Nice ou par e-mail à l’adresse <a href="mailto:contact@legouet-guitares.com">contact@legouet-guitares.com</a>. </p>
+                    <p>2.1 Les données sont exclusivement destinées à L.F Industrie, à ses filiales ou aux membres de son réseau commercial à des fins d’enquêtes, d’analyses, de communications institutionnelles, d’opérations relatives à la gestion clients ou, si vous en êtes d’accord, de propositions commerciales. Ces informations sont confidentielles et conservées par L.F Industrie, ses filiales et les membres de son réseau commercial. Conformément à la loi « Informatique et Libertés » du 06/01/78, vous disposez d'un droit d'accès, de rectification et de suppression de ces données ainsi que d’un droit de vous opposer à ce que ces données fassent l'objet d'un traitement en nous contactant par courrier à l’adresse suivante : Chemin des Sablières - 06100 Nice ou par e-mail à l’adresse <a href="mailto:lf.ingenierie@wanadoo.fr">lf.ingenierie@wanadoo.fr</a>. </p>
                     <p>Vos demandes devront être signées et accompagnées de la photocopie d’un titre d’identité portant la signature du titulaire. La demande devra préciser l’adresse à laquelle devra parvenir la réponse. </p>
-                    <p>Dans l’hypothèse où vous avez accepté dans nos formulaires de recevoir par email des informations et sollicitations commerciales émanant de notre société et de son réseau de magasins à l’enseigne de L.F Industrie, vous aurez à tout moment la faculté de revenir sur cette décision, soit en cliquant sur le lien prévu à cet effet en bas des mails que vous recevez, soit en envoyant un mail avec pour objet « désabonnement » à l’adresse suivante : <a href="mailto:contact@legouet-guitares.com">contact@legouet-guitares.com</a>. </p>
+                    <p>Dans l’hypothèse où vous avez accepté dans nos formulaires de recevoir par email des informations et sollicitations commerciales émanant de notre société et de son réseau de magasins à l’enseigne de L.F Industrie, vous aurez à tout moment la faculté de revenir sur cette décision, soit en cliquant sur le lien prévu à cet effet en bas des mails que vous recevez, soit en envoyant un mail avec pour objet « désabonnement » à l’adresse suivante : <a href="mailto:lf.ingenierie@wanadoo.fr">lf.ingenierie@wanadoo.fr</a>. </p>
                     <p>2.2 Conformément à l’article 6 de la Loi du 21 juin 2004 pour la confiance en l’économie numérique, l'hébergeur conservera vos données de connexion, couvertes par le secret professionnel et traitées dans le respect des dispositions légales en matière de données personnelles. </p>
                     <h3>Art. 3 Liens hypertextes</h3>
                     <p>Si vous souhaitez mettre en place un lien hypertexte vers notre Site, vous devez en conséquence prendre contact avec le Responsable du Site. L.F Industrie ne peut en aucun cas être tenue pour responsable du contenu des sites qui font l'objet d'un lien hypertexte à partir du présent Site. </p>

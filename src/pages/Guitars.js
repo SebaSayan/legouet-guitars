@@ -26,7 +26,7 @@ const Guitars = () => {
             <section className='guitars'>
                 <h1>Nos guitares électriques</h1>
                 <div className='text-container'>
-                    <p>Découvrez en image et vidéo nos guitares électriques conçues dans notre atelier. Des guitares pour professionnels en aluminium mais aussi en titane personnalisées et fabriquées sur mesure. </p>
+                    <p>Découvrez en images et vidéos nos guitares électriques conçues dans notre atelier. Des guitares pour professionnels en aluminium, mais aussi en titane, personnalisées et fabriquées sur mesure. </p>
                 </div>
                 <div className="img-container guitar-card">
                     <h2>Jazz Fusion</h2>

@@ -6,7 +6,7 @@ import imgMancheAlu from '../assets/img/manche-alu.jpg';
 import imgMancheBois from '../assets/img/manche-bois.jpg';
 import imgMancheAlu2 from '../assets/img/manche-alu2.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 const APropos = () => {
@@ -28,7 +28,7 @@ const APropos = () => {
             <section className='home'>
                 <h1><strong>Fabrication  française</strong> de guitares électriques en aluminium.</h1>
                 <div className='text-container'>
-                    <p>Spécialiste en fabrication de <strong>guitares en titane, guitare en aluminium, manches en aluminium et d'accastillage titane</strong>, notre objectif est de répondre aux attentes du guitariste professionnel et de l'amateur passionné le plus exigeant, en visant une qualité supérieure.</p>
+                    <p>Spécialiste de la fabrication de <strong>guitares en titane, guitares en aluminium, manches en aluminium et d'accastillage titane</strong>, notre objectif est de répondre aux attentes des guitaristes professionnels et des amateurs passionnés les plus exigeants, en visant une qualité supérieure.</p>
                     <p>La particularité des guitares que nous réalisons réside dans la combinaison de superalliages de métaux entièrement <strong>usinés dans la masse.</strong> Il n'y a aucune soudure.</p>
                     <p>Cette réalisation est permise par notre maîtrise des techniques d'usinage, acquise et validée auprès de plusieurs secteurs de pointe de l'industrie, notamment l'aéronautique.</p>
                     <p>Ce savoir-faire rigoureux, appliqué à des métaux sélectionnés pour leurs propriétés mécaniques et acoustiques, a été la base d'une production de modèles aux qualités sonores spécifiques et aux potentialités élargies.</p>
