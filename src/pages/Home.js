@@ -90,8 +90,8 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <p>7575 € TTC</p>
-                        <NavLink to="/guitares/surpeme">Voir plus</NavLink>
+                        <p></p>
+                        <NavLink to="/guitares/supreme">Voir plus</NavLink>
                     </div>
                 </div>
 
@@ -104,7 +104,7 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <p>8437 € TTC</p>
+                        <p></p>
                         <NavLink to="/guitares/ultime">Voir plus</NavLink>
                     </div>
                 </div>
