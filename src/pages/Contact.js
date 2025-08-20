@@ -12,7 +12,7 @@ const Contact = () => {
     const [isCheckedBot, setIsCheckedBot] = useState(false);
     const [phoneNumber, setPhoneNumber] = useState("");
     const [errorForm, setErrorForm] = useState({});
-    const [isValid, setIsValid] = useState(false);
+    const [isValidPhone, setIsValidPhone] = useState(false);
     const [sendMail, setSendMail] = useState("");
     const [message, setMessage] = useState("");
     const [email, setEmail] = useState("");
@@ -20,9 +20,9 @@ const Contact = () => {
 
     useEffect(() => {
         if (phoneNumber) {
-            setIsValid(isValidNumber(phoneNumber));
+            setIsValidPhone(isValidNumber(phoneNumber));
         } else {
-            setIsValid(false);
+            setIsValidPhone(false);
         }
     }, [phoneNumber]);
 
@@ -55,7 +55,8 @@ const Contact = () => {
             errors.checkboxBot = "Veuillez confirmer que vous n'êtes pas un robot.";
         }
 
-        if (!isValid) {
+        if (!isValidPhone) {
+            isValid = false;
             errors.phone = "Le numéro de téléphone n'est pas valide.";
         }
 
@@ -83,7 +84,8 @@ const Contact = () => {
             const response = await axios.post(
                 "https://api.brevo.com/v3/smtp/email",
                 {
-                    sender: { name, email },
+                    sender: { name: "Legouet Guitares", email: "no-reply@creawebdev.fr" },
+                    replyTo: { email, name },
                     to: [{ email: "joffrey@creawebdev.fr" }],
                     subject: "Message du formulaire Legouet Guitares - Administrateur",
                     htmlContent: htmlContent
@@ -180,7 +182,7 @@ const Contact = () => {
                                     defaultCountry="FR"
                                     required
                                 />
-                                {phoneNumber && !isValid && (
+                                {phoneNumber && !isValidPhone && (
                                     <div style={{ color: 'red' }}>Le numéro de téléphone n'est pas valide.</div>
                                 )}
                                 <textarea
