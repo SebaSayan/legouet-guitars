@@ -82,7 +82,7 @@ const Contact = () => {
 
         try {
             const response = await axios.post(
-                "https://api.brevo.com/v3/smtp/email",
+                "https://legouet-guitare.com//sendmail.php",
                 {
                     sender: { name: "Legouet Guitares", email: "no-reply@creawebdev.fr" },
                     replyTo: { email, name },
