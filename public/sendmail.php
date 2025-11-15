@@ -5,7 +5,7 @@ header("Content-Type: application/json");
 
 $data = json_decode(file_get_contents("php://input"), true);
 
-$apiKey = "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";
+$apiKey = "KEY-API";
 
 $payload = json_encode([
     "sender" => $data["sender"],
