@@ -80,22 +80,41 @@ const Contact = () => {
             <p>Tel : ${phoneNumber}</p>
             <p>Message : ${message}</p>`;
 
+        // try {
+        //     const response = await axios.post(
+        //         "https://legouet-guitare.com//sendmail.php",
+        //         {
+        //             sender: { name: "Legouet Guitares", email: "no-reply@creawebdev.fr" },
+        //             replyTo: { email, name },
+        //             to: [{ email: "joffrey@creawebdev.fr" }],
+        //             subject: "Message du formulaire Legouet Guitares - Administrateur",
+        //             htmlContent: htmlContent
+        //         },
+        //         {
+        //             headers: {
+        //                 Accept: "application/json",
+        //                 "Content-Type": "application/json",
+        //                 "api-key": process.env.REACT_APP_SENDINGBLUE_EMAIL,
+        //             },
+        //         }
+        //     );
+
+
         try {
             const response = await axios.post(
-                "https://legouet-guitare.com//sendmail.php",
+                "https://legouet-guitare.com/sendmail.php",
                 {
-                    sender: { name: "Legouet Guitares", email: "no-reply@creawebdev.fr" },
-                    replyTo: { email, name },
-                    to: [{ email: "joffrey@creawebdev.fr" }],
-                    subject: "Message du formulaire Legouet Guitares - Administrateur",
-                    htmlContent: htmlContent
+                    name,
+                    email,
+                    phoneNumber,
+                    message,
+                    htmlContent: htmlContent // ✔️ tu envoies ton HTML si tu veux le conserver
                 },
                 {
                     headers: {
                         Accept: "application/json",
-                        "Content-Type": "application/json",
-                        "api-key": process.env.REACT_APP_SENDINGBLUE_EMAIL, // Utilisation de la clé API dans une variable d'environnement
-                    },
+                        "Content-Type": "application/json"
+                    }
                 }
             );
 

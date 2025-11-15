@@ -5,14 +5,26 @@ header("Content-Type: application/json");
 
 $data = json_decode(file_get_contents("php://input"), true);
 
+$email = $data["replyTo"]["email"] ?? "";
+$name = $data["replyTo"]["name"] ?? "";
+$htmlContent = $data["htmlContent"] ?? "";
+
 $apiKey = "KEY-API";
 
 $payload = json_encode([
-    "sender" => $data["sender"],
-    "replyTo" => $data["replyTo"],
-    "to" => $data["to"],
-    "subject" => $data["subject"],
-    "htmlContent" => $data["htmlContent"]
+    "sender" => [
+        "name"  => "Legouet Guitares",
+        "email" => "no-reply@creawebdev.fr"
+    ],
+    "replyTo" => [
+        "email" => $email,
+        "name"  => $name
+    ],
+    "to" => [
+        ["email" => "joffrey@creawebdev.fr"]
+    ],
+    "subject" => "Message du formulaire Legouet Guitares - Administrateur",
+    "htmlContent" => $htmlContent
 ]);
 
 $ch = curl_init("https://api.brevo.com/v3/smtp/email");
