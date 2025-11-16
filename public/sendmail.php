@@ -6,14 +6,13 @@ header("Content-Type: application/json");
 
 $data = json_decode(file_get_contents("php://input"), true);
 
-// ✔ Vérification des données reçues
 $sender      = $data["sender"] ?? ["name" => "System", "email" => "no-reply@example.com"];
 $replyTo     = $data["replyTo"] ?? null;
 $subject     = $data["subject"] ?? "";
 $htmlContent = $data["htmlContent"] ?? "";
 $to          = $data["to"] ?? [];
 
-$apiKey = "CLE_ICI";
+$apiKey = "";
 
 $payload = json_encode([
     "sender"      => $sender,
