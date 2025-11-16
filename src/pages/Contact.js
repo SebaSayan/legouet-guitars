@@ -74,51 +74,43 @@ const Contact = () => {
             return;
         }
 
-        let htmlContent = `<p>Bonjour, un client vous a envoyé un message via la page "Contact". Voici le contenu de celui-ci :</p>
-            <p>Nom : ${name}</p>
-            <p>Email : ${email}</p>
-            <p>Tel : ${phoneNumber}</p>
-            <p>Message : ${message}</p>`;
-
-        // try {
-        //     const response = await axios.post(
-        //         "https://legouet-guitare.com//sendmail.php",
-        //         {
-        //             sender: { name: "Legouet Guitares", email: "no-reply@creawebdev.fr" },
-        //             replyTo: { email, name },
-        //             to: [{ email: "joffrey@creawebdev.fr" }],
-        //             subject: "Message du formulaire Legouet Guitares - Administrateur",
-        //             htmlContent: htmlContent
-        //         },
-        //         {
-        //             headers: {
-        //                 Accept: "application/json",
-        //                 "Content-Type": "application/json",
-        //                 "api-key": process.env.REACT_APP_SENDINGBLUE_EMAIL,
-        //             },
-        //         }
-        //     );
-
-
         try {
             const response = await axios.post(
                 "https://legouet-guitare.com/sendmail.php",
                 {
-                    name,
-                    email,
-                    phoneNumber,
-                    message,
-                    htmlContent: htmlContent // ✔️ tu envoies ton HTML si tu veux le conserver
+                    sender: {
+                        name: "Legouet Guitares",
+                        email: "no-reply@creawebdev.fr"
+                    },
+
+                    replyTo: {
+                        email: email,
+                        name: name
+                    },
+
+                    to: [
+                        { email: "joffrey@creawebdev.fr" }
+                    ],
+
+                    subject: "Message du formulaire Legouet Guitares - Administrateur",
+
+                    htmlContent: `
+                    <p>Bonjour, un client vous a envoyé un message via la page "Contact".</p>
+                    <p><strong>Nom :</strong> ${name}</p>
+                    <p><strong>Email :</strong> ${email}</p>
+                    <p><strong>Téléphone :</strong> ${phoneNumber}</p>
+                    <p><strong>Message :</strong><br>${message}</p>
+                `
                 },
                 {
                     headers: {
-                        Accept: "application/json",
                         "Content-Type": "application/json"
                     }
                 }
             );
 
-            console.log(response);
+            console.log("Réponse du serveur :", response.data);
+
             setName("");
             setEmail("");
             setPhoneNumber("");
@@ -127,15 +119,14 @@ const Contact = () => {
             setIsCheckedConf(false);
             setIsCheckedBot(false);
             setSendMail("Votre message a été envoyé avec succès !");
+
             setTimeout(() => {
                 setSendMail("");
             }, 5000);
+
         } catch (error) {
-            console.error(error);
-            setErrorForm({});
-            setIsCheckedConf(false);
-            setIsCheckedBot(false);
-            setSendMail("Une erreur est survenue lors de l'envoi de votre message.");
+            console.error("Erreur :", error);
+            setSendMail("Une erreur est survenue lors de l'envoi du message.");
         }
     };
 

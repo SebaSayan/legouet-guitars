@@ -1,38 +1,34 @@
 <?php
+
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json");
 
 $data = json_decode(file_get_contents("php://input"), true);
 
-$email = $data["replyTo"]["email"] ?? "";
-$name = $data["replyTo"]["name"] ?? "";
+// ✔ Vérification des données reçues
+$sender      = $data["sender"] ?? ["name" => "System", "email" => "no-reply@example.com"];
+$replyTo     = $data["replyTo"] ?? null;
+$subject     = $data["subject"] ?? "";
 $htmlContent = $data["htmlContent"] ?? "";
+$to          = $data["to"] ?? [];
 
-$apiKey = "KEY-API";
+$apiKey = "CLE_ICI";
 
 $payload = json_encode([
-    "sender" => [
-        "name"  => "Legouet Guitares",
-        "email" => "no-reply@creawebdev.fr"
-    ],
-    "replyTo" => [
-        "email" => $email,
-        "name"  => $name
-    ],
-    "to" => [
-        ["email" => "joffrey@creawebdev.fr"]
-    ],
-    "subject" => "Message du formulaire Legouet Guitares - Administrateur",
+    "sender"      => $sender,
+    "replyTo"     => $replyTo,
+    "to"          => $to,
+    "subject"     => $subject,
     "htmlContent" => $htmlContent
 ]);
 
 $ch = curl_init("https://api.brevo.com/v3/smtp/email");
 
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    "Accept: application/json",
-    "Content-Type: application/json",
-    "api-key: $apiKey"
+    "accept: application/json",
+    "content-type: application/json",
+    "api-key:$apiKey"
 ]);
 
 curl_setopt($ch, CURLOPT_POST, true);
@@ -41,10 +37,11 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 $response = curl_exec($ch);
 $error = curl_error($ch);
+
 curl_close($ch);
 
-if ($error) {
-    echo json_encode(["error" => $error]);
-} else {
-    echo $response;
-}
+echo json_encode([
+    "php_error" => $error,
+    "brevo_response" => $response,
+    "payload_sent" => json_decode($payload, true)
+]);
