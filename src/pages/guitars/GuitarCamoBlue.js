@@ -115,6 +115,7 @@ const GuitarCamoBlue = () => {
                     <p>Pour intervenir sur la tention des ressort, il suffit de dévisser le couvercle (opération qui se réalise seulement si on passe a un tirant plus élevé).</p>
                     <p>Poids = 3.400 Kg</p> 
                 </div> */}
+                <p>3982 € TTC (Housse incluse)</p>
             </div>
             <Footer />
         </div>

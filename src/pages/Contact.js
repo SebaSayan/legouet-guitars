@@ -136,7 +136,7 @@ const Contact = () => {
             <section className="contact">
                 <h1>Contacter notre usine</h1>
                 <p>
-                    Legouet Guitares est spécialisée dans l’usinage de pièces de précision et la fabrication de guitares électriques en titane et aluminium.{" "}
+                    LF Industrie est spécialisée dans l’usinage de pièces de précision et la fabrication de guitares et basses électriques en titane et aluminium.{" "}
                     <strong>Contactez notre usine de pièces mécaniques en PACA</strong> pour discuter de votre projet avec un passionné de guitare, d'usinage, et de conception à votre écoute.
                 </p>
                 <div className="container">

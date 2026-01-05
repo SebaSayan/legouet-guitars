@@ -15,8 +15,11 @@ import GuitarSupreme from "./pages/guitars/GuitarSupreme";
 import GuitarUltime from "./pages/guitars/GuitarUltime";
 import GuitarCamoBlue from "./pages/guitars/GuitarCamoBlue";
 import GuitarIronPlague from "./pages/guitars/GuitarIronPlague";
+import Basses from "./pages/Basses";
 import Artistes from "./pages/Artistes";
+import Galerie from "./pages/Galerie";
 import APropos from "./pages/APropos";
+import BassLaGiger from "./pages/bass/BassLaGiger";
 
 function App() {
   return (
@@ -25,7 +28,9 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* <Route path="/build-and-cost" element={<BuildAndCoast />} /> */}
         {/* <Route path="/guitares" element={<Guitars />} /> */}
+        <Route path="/basses" element={<Basses />} />
         <Route path="/artistes" element={<Artistes />} />
+        <Route path="/galerie" element={<Galerie />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/a-propos" element={<APropos />} />
         <Route path="/guitares/jazz-fusion" element={<GuitarJazzFusion />} />
@@ -36,6 +41,7 @@ function App() {
         <Route path="/guitares/ultime" element={<GuitarUltime />} />
         <Route path="/guitares/camo-blue" element={<GuitarCamoBlue />} />
         <Route path="/guitares/iron-plague" element={<GuitarIronPlague />} />
+        <Route path="/bass/la-giger" element={<BassLaGiger />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route path="/confidentialite" element={<Confidentiality />} />
         <Route path="*" element={<NotFound />} />

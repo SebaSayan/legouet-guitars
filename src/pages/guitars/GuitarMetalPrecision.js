@@ -89,6 +89,7 @@ const GuitarMetalPrecision = () => {
                     <p>Cette guitare permet de réaliser toutes les rythmiques métal les plus techniques, sa structure rigide lui confère une grande stabilité ainsi qu'une dynamique impresionnante.</p>
                     <p>Possibilité de jouer dans un registre blues rock grâce à ses micros passifs au niveau de sortie modérée ( un vrai "couteau suisse").</p>
                     <p>Poids = 3.350 Kg</p>
+                    <p>4018 € TTC (Housse incluse)</p>
                     <div style={{ display: "flex", justifyContent: 'center', width: '100%', gap: '10px', flexWrap: 'wrap', margin: '0 auto' }}>
                         <ReactPlayer url="https://www.youtube.com/watch?v=3kcbSFx1Fsk" controls={true} />
                         <ReactPlayer url="https://www.youtube.com/watch?v=X50Eji4G91A&t=416s" controls={true} />

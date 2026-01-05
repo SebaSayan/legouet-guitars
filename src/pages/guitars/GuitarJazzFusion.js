@@ -97,6 +97,7 @@ const GuitarJazzFusion = () => {
                     <p>On peut passer en drop D ou changer d'accordage sans dificulté car elle n'a pas de sillet bloc corde.</p>
                     <p>Pour intervenir sur la tention des ressort, il suffit de dévisser le couvercle (opération qui se réalise seulement si on passe a un tirant plus élevé).</p>
                     <p>Poids = 3.400 Kg</p>
+                    <p>3227 € TTC (Housse incluse)</p>
                 </div>
             </div>
             <Footer />

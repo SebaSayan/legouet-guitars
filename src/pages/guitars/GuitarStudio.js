@@ -102,6 +102,7 @@ const GuitarStudio = () => {
                     <p>Ses Micros Legouet Humbucker permettent un registre très large passant du Jazz au métal technique qui peuvent se combiner au son du Capteur MIDI ( un son de piano et celui de la guitare en simultané).</p>
                     <p>Il est possible d'enregistrer un album entier avec ce seul instrument.</p>
                     <p>Poids = 3.450 Kg</p>
+                    <p>4317 € TTC (Housse incluse)</p>
                     <div style={{ display: "flex", justifyContent: 'center' }}>
                         <ReactPlayer url={videoGuitar} controls={true} light={imgVignette1} />
                     </div>

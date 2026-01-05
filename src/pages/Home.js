@@ -37,7 +37,6 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className='price-plus'>
-                        <p>3227 € TTC</p>
                         <NavLink to="/guitares/jazz-fusion">Voir plus</NavLink>
                     </div>
 
@@ -51,7 +50,6 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <p>4018 € TTC</p>
                         <NavLink to="/guitares/metal-precision">Voir plus</NavLink>
                     </div>
                 </div>
@@ -64,7 +62,6 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <p>4317 € TTC</p>
                         <NavLink to="/guitares/studio">Voir plus</NavLink>
                     </div>
                 </div>
@@ -77,7 +74,6 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <p>3860 € TTC</p>
                         <NavLink to="/guitares/rock">Voir plus</NavLink>
                     </div>
                 </div>
@@ -90,7 +86,6 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <p></p>
                         <NavLink to="/guitares/supreme">Voir plus</NavLink>
                     </div>
                 </div>
@@ -104,7 +99,6 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <p></p>
                         <NavLink to="/guitares/ultime">Voir plus</NavLink>
                     </div>
                 </div>
@@ -117,7 +111,6 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <p>3982 € TTC</p>
                         <NavLink to="/guitares/camo-blue">Voir plus</NavLink>
                     </div>
                 </div>
@@ -130,7 +123,6 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <p>4054 € TTC</p>
                         <NavLink to="/guitares/iron-plague">Voir plus</NavLink>
                     </div>
                 </div>

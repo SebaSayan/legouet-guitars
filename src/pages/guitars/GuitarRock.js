@@ -97,6 +97,7 @@ const GuitarRock = () => {
                     <p>Ces micros type firebird lui confèrent une certaine  agressivité afin de reproduire vos chanson ROCK favorites.</p>
                     <p>Cette guitare est à l'aise dans un registre qui va du rock au métal années 80.</p>
                     <p>Poids = 3.400 Kg</p>
+                    <p>3860 € TTC (Housse incluse)</p>
                 </div>
             </div>
             <Footer />

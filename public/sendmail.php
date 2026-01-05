@@ -6,7 +6,7 @@ header("Content-Type: application/json");
 
 $data = json_decode(file_get_contents("php://input"), true);
 
-$sender      = $data["sender"] ?? ["name" => "System", "email" => "no-reply@example.com"];
+$sender      = $data["sender"] ?? ["name" => "System", "email" => "no-reply@legouet-guitare.com"];
 $replyTo     = $data["replyTo"] ?? null;
 $subject     = $data["subject"] ?? "";
 $htmlContent = $data["htmlContent"] ?? "";
