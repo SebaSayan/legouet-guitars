@@ -88,7 +88,7 @@ const Footer = () => (
                 <h3>Suivez-nous</h3>
                 <div className="social-links">
                     <a
-                        href="https://www.facebook.com"
+                        href="https://www.facebook.com/people/Legouet-Guitares/61575642706651/"
                         className="facebook"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -97,7 +97,7 @@ const Footer = () => (
                     </a>
 
                     <a
-                        href="https://www.instagram.com"
+                        href="https://www.instagram.com/legouet_guitares/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="social-logo"
