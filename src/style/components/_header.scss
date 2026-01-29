@@ -94,7 +94,12 @@
             }
 
             @media screen and (max-width: 380px) {
-                width: 300px;
+                width: 280px;
+                height: 150px;
+            }
+
+            @media screen and (max-width: 330px) {
+                width: 200px;
                 height: 150px;
             }
         }
