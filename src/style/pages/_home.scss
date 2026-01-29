@@ -1,4 +1,13 @@
 .body {
+
+    .guitars {
+        .text-container {
+            p {
+                text-align: center;
+            }
+        }
+    }
+
     .home {
         background: rgba(0, 0, 0, 0.753);
         width: 100%;
@@ -12,11 +21,11 @@
 
         .text-container {
             max-width: 70%;
-            margin: 0 auto;
+            // margin: 0 auto;
             padding-bottom: 50px;
 
             p {
-                margin: 20px 10px;
+                margin: 0px auto;
             }
 
             @media screen and (max-width: 800px) {

@@ -28,7 +28,7 @@ const Home = () => {
             <section className='guitars'>
                 <h1>Découvrez nos modèles sur mesure</h1>
                 <div className='text-container'>
-                    <p>Découvrez en image et vidéo nos guitares électriques conçues dans notre atelier. Des guitares pour professionnels en aluminium mais aussi en titane personnalisées et fabriquées sur mesure. </p>
+                    <p>Découvrez en images et en vidéos nos guitares et basses custom, conçues et fabriquées sur mesure dans notre atelier.</p>
                 </div>
                 <div className="img-container guitar-card">
                     <h2>La Giger</h2>
