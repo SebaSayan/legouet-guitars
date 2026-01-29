@@ -53,7 +53,6 @@ const Home = () => {
                     <div className='price-plus'>
                         <NavLink to="/guitares/jazz-fusion">Voir plus</NavLink>
                     </div>
-
                 </div>
                 <div className="img-container guitar-card">
                     <h2>Camo Blue</h2>

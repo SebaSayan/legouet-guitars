@@ -1,8 +1,14 @@
+// .guitar {
+//     transform: translateY(-500px);
+// }
+
 .guitar {
-    transform: translateY(-500px);
+    position: relative;
+    top: -500px;
 }
 
 .body {
+
     .guitars {
         background: rgba(0, 0, 0, 0.753);
         width: 100%;
@@ -40,7 +46,8 @@
 
         .guitar-card {
             flex-direction: column;
-            width: 380px;
+            width: 100%;
+            max-width: 380px;
 
             &::after {
                 content: "";
@@ -48,7 +55,16 @@
                 height: 2px;
                 width: 100%;
                 margin: 20px 0;
+
+                @media screen and (max-width: 800px) {
+                    width: 90%;
+                }
+
+                @media screen and (max-width: 400px) {
+                    width: 80%;
+                }
             }
+
         }
 
         .img-container {
@@ -63,9 +79,14 @@
                 text-align: center;
             }
 
+            // .card {
+            //     width: 350px;
+            //     margin: 15px;
+            // }
             .card {
-                width: 350px;
-                margin: 15px;
+                width: 100%;
+                max-width: 350px;
+                margin: 15px auto;
             }
 
             .price-plus {
