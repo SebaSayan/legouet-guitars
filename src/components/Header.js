@@ -39,7 +39,7 @@ const Header = () => {
                 {/* DROITE : RÉSEAUX */}
                 <div className="social-right">
                     <a
-                        href="https://www.facebook.com/people/Legouet-Guitares/61575642706651/"
+                        href="https://www.facebook.com/share/17fufwemZz/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="facebook"
