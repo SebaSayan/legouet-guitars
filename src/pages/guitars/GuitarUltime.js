@@ -86,7 +86,7 @@ const GuitarUltime = () => {
                     <p>Corps titane vernis, manche aluminium "infinite" vernis, micros legouet humbucker, cordier inox avec pontet titane, 1 volume splitable, 1 tone et bouton en aluminium.</p>
                     <p> "ll y a un avant et un après".</p>
                     <p>Poids = 3.570 Kg</p>
-                    <p>8437 € TTC (Housse incluse)</p>
+                    <p>25 000 € TTC (Housse incluse)</p>
                 </div>
             </div>
             <Footer />

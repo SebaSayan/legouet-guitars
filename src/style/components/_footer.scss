@@ -1,13 +1,70 @@
+// footer {
+//     background: black;
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+
+//     .logo-footer {
+//         background: url('../../assets/img/logosite3.png') center/cover;
+//         height: 300px;
+//         width: 650px;
+//         margin: 0 auto;
+
+//         @media screen and (max-width: 670px) {
+//             height: 240px;
+//             width: 100%;
+//         }
+
+//         @media screen and (max-width: 540px) {
+//             height: 200px;
+//         }
+
+//     }
+
+//     .footer-item {
+//         display: flex;
+//         width: 100%;
+//         margin: 10px auto;
+
+//         .footer-ico {
+//             margin: 0 10px;
+//             height: 25px;
+//             width: 19px;
+//         }
+
+//         a {
+//             color: white;
+//             text-decoration: none;
+//         }
+//     }
+
+//     .footer-bottom {
+//         text-align: center;
+//         padding: 10px 0;
+
+//         a {
+//             font-size: 0.8rem;
+//             color: grey;
+//             text-decoration: none;
+//             transition: 0.4s;
+
+//             &:hover {
+//                 color: white;
+//             }
+//         }
+//     }
+// }
+
 footer {
     background: black;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    color: white;
 
     .logo-footer {
         background: url('../../assets/img/logosite3.png') center/cover;
-        height: 300px;
         width: 650px;
+        height: 220px;
         margin: 0 auto;
 
         @media screen and (max-width: 670px) {
@@ -16,18 +73,39 @@ footer {
         }
 
         @media screen and (max-width: 540px) {
-            height: 200px;
+            height: 150px;
         }
+    }
 
+    /* CONTENU PRINCIPAL */
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 10%;
+        gap: 40px;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    /* COLONNE GAUCHE */
+    .footer-left {
+        flex: 1;
     }
 
     .footer-item {
         display: flex;
-        width: 100%;
-        margin: 10px auto;
+        align-items: center;
+        margin: 10px 0;
+
+        @media screen and (max-width: 768px) {
+            justify-content: center;
+        }
 
         .footer-ico {
-            margin: 0 10px;
+            margin-right: 10px;
             height: 25px;
             width: 19px;
         }
@@ -38,9 +116,39 @@ footer {
         }
     }
 
+    /* COLONNE DROITE */
+    .footer-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+
+            a {
+                font-size: 3rem;
+                color: grey;
+                transition: 0.3s;
+
+                &:hover {
+                    color: white;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    /* BAS DE FOOTER */
     .footer-bottom {
         text-align: center;
-        padding: 10px 0;
+        padding: 15px 0;
 
         a {
             font-size: 0.8rem;
@@ -52,5 +160,43 @@ footer {
                 color: white;
             }
         }
+    }
+
+    .social-links a.facebook {
+        color: #1877F2;
+    }
+
+    .social-logo {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .instagram-logo {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+    .instagram-logo:hover {
+        transform: scale(1.12);
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 600px) {
+        .instagram-logo {
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+
+    .social-links a {
+        transition: transform 0.3s ease;
+    }
+
+    .social-links a:hover {
+        transform: scale(1.15);
     }
 }

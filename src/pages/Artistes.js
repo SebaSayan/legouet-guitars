@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import LANDMVRKS1 from '../assets/img/LANDMVRKS1.jpg';
 import LANDMVRKS2 from '../assets/img/LANDMVRKS2.jpg';
+import SoulSplitter1 from '../assets/img/theo.jpeg';
 import Azelma1 from '../assets/img/azelma1.jpg';
 import Azelma2 from '../assets/img/azelma2.jpg';
 import SebastienGros from '../assets/img/sebastiengros.jpg';
@@ -25,6 +26,13 @@ const Artistes = () => {
                 </h2>
                 <img className='imgArtist' src={LANDMVRKS1} alt="Rudy Purkart avec sa Legouet" />
                 <img className='imgArtist' src={LANDMVRKS2} alt="Rudy Purkart avec sa Legouet" />
+
+                <h2>𝐒𝐎𝐔𝐋 𝐒𝐏𝐋𝐈𝐓𝐓𝐄𝐑
+                    <div className='logoWeb'>
+                        <NavLink to='https://www.instagram.com/soulsplitterfr/' target='_blank' title='Ouvrir CoxInHell sur Instagram'><img src={LogoInstagram} alt="Logo Instagram" width={45} /></NavLink>
+                    </div>
+                </h2>
+                <img className='imgArtist Soul Splitter' src={SoulSplitter1} alt="Soul Splitter avec sa Legouet" />
 
                 <h2>Azelma
                     <div className='logoWeb'>

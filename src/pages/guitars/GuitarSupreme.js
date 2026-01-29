@@ -86,7 +86,7 @@ const GuitarSupreme = () => {
                     <p>Corps en titane taillé dans la masse, vernis, cordier standard avec pontet en bronze, un manche en érable teinté noir, des repères en nacre blanc, des micros DI MARZIO Joe dupalntier, 1 volume , 1 tone et bouton aluminium.</p>
                     <p>Une merveille esthétique et sonore qui ne peut laisser indifférent.</p>
                     <p>Poids = 3.340 Kg</p>
-                    <p>7575 € TTC (Housse incluse)</p>
+                    <p>25 000 € TTC (Housse incluse)</p>
                     <div style={{ display: "flex", justifyContent: 'center', width: '100%', gap: '10px', flexWrap: 'wrap', margin: '0 auto' }}>
                         <ReactPlayer url="https://www.youtube.com/watch?v=kVqpNewlAY8" controls={true} />
                         <ReactPlayer url="https://youtu.be/eUPjFY5QshY" controls={true} />

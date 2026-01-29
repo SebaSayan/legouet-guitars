@@ -96,7 +96,7 @@ const BassLaGiger = () => {
                     <p>Ses deux micros Benedetti ont été spécialement conçus en exclusivité pour ce modèle, afin d’offrir un son clair, net et précis.</p>
                     <p>Elle est dotée d’une gravure laser, réalisée par l'artiste <a href="https://www.instagram.com/itsguyguy_/" target="_blank" rel="noopener noreferrer">Guyguy</a> et gravée par <a href="https://www.instagram.com/tof_gravure/" target="_blank" rel="noopener noreferrer">Tof Gravure</a>.</p>
                     <p>Poids : 4,4 kg</p>
-                    <p>7 650 € TTC (housse incluse)</p>
+                    <p>8 400 € TTC (housse incluse)</p>
                 </div>
             </div>
             <Footer />

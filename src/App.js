@@ -28,7 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* <Route path="/build-and-cost" element={<BuildAndCoast />} /> */}
         {/* <Route path="/guitares" element={<Guitars />} /> */}
-        <Route path="/basses" element={<Basses />} />
+        {/* <Route path="/basses" element={<Basses />} /> */}
         <Route path="/artistes" element={<Artistes />} />
         <Route path="/galerie" element={<Galerie />} />
         <Route path="/contact" element={<Contact />} />
