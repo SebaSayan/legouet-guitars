@@ -39,7 +39,7 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className='price-plus'>
-                        <NavLink to="/bass/la-giger">Voir plus</NavLink>
+                        <NavLink to="/bass/la-giger" aria-label="Lire les spécificités de La Giger et voir les photos">Voir plus</NavLink>
                     </div>
                 </div>
                 <div className="img-container guitar-card">
@@ -51,7 +51,7 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className='price-plus'>
-                        <NavLink to="/guitares/jazz-fusion">Voir plus</NavLink>
+                        <NavLink to="/guitares/jazz-fusion" aria-label="Lire les spécificités de la Jazz Fusion et voir les photos">Voir plus</NavLink>
                     </div>
                 </div>
                 <div className="img-container guitar-card">
@@ -63,7 +63,7 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <NavLink to="/guitares/camo-blue">Voir plus</NavLink>
+                        <NavLink to="/guitares/camo-blue" aria-label="Lire les spécificités de la Camo Blue et voir les photos">Voir plus</NavLink>
                     </div>
                 </div>
                 <div className="img-container guitar-card">
@@ -75,7 +75,7 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <NavLink to="/guitares/metal-precision">Voir plus</NavLink>
+                        <NavLink to="/guitares/metal-precision" aria-label="Lire les spécificités de la Metal Precision et voir les photos">Voir plus</NavLink>
                     </div>
                 </div>
                 <div className="img-container guitar-card">
@@ -87,7 +87,7 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <NavLink to="/guitares/studio">Voir plus</NavLink>
+                        <NavLink to="/guitares/studio" aria-label="Lire les spécificités de la Studio et voir les photos">Voir plus</NavLink>
                     </div>
                 </div>
                 <div className="img-container guitar-card">
@@ -99,7 +99,7 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <NavLink to="/guitares/rock">Voir plus</NavLink>
+                        <NavLink to="/guitares/rock" aria-label="Lire les spécificités de la Rock et voir les photos">Voir plus</NavLink>
                     </div>
                 </div>
                 <div className="img-container guitar-card">
@@ -111,7 +111,7 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <NavLink to="/guitares/supreme">Voir plus</NavLink>
+                        <NavLink to="/guitares/supreme" aria-label="Lire les spécificités de la Supreme et voir les photos">Voir plus</NavLink>
                     </div>
                 </div>
 
@@ -124,7 +124,7 @@ const Home = () => {
                     />
                     </NavLink>
                     <div className="price-plus">
-                        <NavLink to="/guitares/ultime">Voir plus</NavLink>
+                        <NavLink to="/guitares/ultime" aria-label="Lire les spécificités de L'Ultime et voir les photos">Voir plus</NavLink>
                     </div>
                 </div>
                 <div className='img-container guitar-card'>

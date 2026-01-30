@@ -22,7 +22,7 @@ const Artistes = () => {
                 <h1>Voici les artistes qui nous font confiance</h1>
                 <h2>Rudy Purkart <p>(Bassiste de LANDMVRKS)</p>
                     <div className='logoWeb'>
-                        <NavLink to='https://www.instagram.com/landmvrks/' target='_blank' title='Ouvrir LANDMVRKS sur Instagram'><img src={LogoInstagram} alt="Logo Instagram" width={45} /></NavLink>
+                        <NavLink to='https://www.instagram.com/rudy_ldmvs/' target='_blank' title='Ouvrir Rudy Purkart sur Instagram'><img src={LogoInstagram} alt="Logo Instagram" width={45} /></NavLink>
                         <NavLink to='https://www.landmvrks.com/' target='_blank' title='Ouvrir le site LANDMVRKS'><img src={LogoWWW} alt="Logo Internet" width={45} /></NavLink>
                     </div>
                 </h2>
