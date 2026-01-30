@@ -9,7 +9,7 @@ import Marty2 from '../assets/img/marty2.jpeg'
 import Azelma1 from '../assets/img/azelma1.jpg';
 import Azelma2 from '../assets/img/azelma2.jpg';
 import SebastienGros from '../assets/img/sebastiengros.jpg';
-import LogoInstagram from '../assets/img/instagram_icon.png.webp';
+import LogoInstagram from '../assets/img/Instagram_icon.png';
 import LogoWWW from '../assets/img/logowww.jpg';
 import LogoNeoGeo from '../assets/img/logo_neogeo.jpg';
 import { NavLink } from 'react-router-dom';
