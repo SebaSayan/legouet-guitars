@@ -10,6 +10,7 @@ import Azelma1 from '../assets/img/azelma1.jpg';
 import Azelma2 from '../assets/img/azelma2.jpg';
 import SebastienGros from '../assets/img/sebastiengros.jpg';
 import LogoInstagram from '../assets/img/Instagram_icon.png';
+import LogoYoutube from '../assets/img/youtube_icon.png';
 import LogoWWW from '../assets/img/logowww.jpg';
 import LogoNeoGeo from '../assets/img/logo_neogeo.jpg';
 import { NavLink } from 'react-router-dom';
@@ -74,6 +75,7 @@ const Artistes = () => {
                     <div className='logoWeb'>
                         <NavLink to='https://www.instagram.com/neogeoguitarist/' target='_blank' title='Ouvrir NeoGeoFanatic sur Instagram'><img src={LogoInstagram} alt="Logo Instagram" width={45} /></NavLink>
                         <NavLink to='https://neogeofanatic.fr/' target='_blank' title='Ouvrir le site NeoGeoFanatic'><img src={LogoWWW} alt="Logo Internet" width={45} /></NavLink>
+                        <NavLink to='https://www.youtube.com/@Neogeofanatic' target='_blank' title='Ouvrir la chaine YouTube de NeoGeoFanatic'><img src={LogoYoutube} className='instagram' alt="Logo YouTube" width={45} /></NavLink>
                     </div>
                 </h2>
                 <img className='imgArtist neoGeo' src={LogoNeoGeo} alt="Logo de NeoGeoFanatic" />

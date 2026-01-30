@@ -21,11 +21,17 @@
 
             .logoWeb {
                 display: flex;
+                align-items: center;
                 justify-content: center;
-                margin: 0 auto;
 
                 img {
                     margin-right: 5px;
+                }
+
+                .instagram img {
+                    width: 48px;
+                    height: 48px;
+                    object-fit: contain;
                 }
             }
 
