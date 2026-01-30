@@ -21,6 +21,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import imgInstagram from '../assets/img/Instagram_icon.png';
 import imgYoutube from '../assets/img/youtube_icon.png';
+import imgFacebook from '../assets/img/Facebook_Logo_2023.png';
 
 const Header = () => {
     return (
@@ -46,7 +47,11 @@ const Header = () => {
                         className="facebook"
                         aria-label="Facebook"
                     >
-                        <FontAwesomeIcon icon={faFacebook} />
+                        <img
+                            src={imgFacebook}
+                            alt="Facebook"
+                            className="facebook"
+                        />
                     </a>
 
                     <a

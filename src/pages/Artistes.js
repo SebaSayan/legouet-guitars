@@ -29,12 +29,13 @@ const Artistes = () => {
                 <img className='imgArtist' src={LANDMVRKS1} alt="Rudy Purkart avec sa Legouet" />
                 <img className='imgArtist' src={LANDMVRKS2} alt="Rudy Purkart avec sa Legouet" />
 
-                <h2>Théo Snow <p>(Guitariste de 𝐒𝐎𝐔𝐋 𝐒𝐏𝐋𝐈𝐓𝐓𝐄𝐑)</p>
+                <h2>Théo Sansano <p>(Guitariste de 𝐒𝐎𝐔𝐋 𝐒𝐏𝐋𝐈𝐓𝐓𝐄𝐑)</p>
                     <div className='logoWeb'>
-                        <NavLink to='https://www.instagram.com/soulsplitterfr/' target='_blank' title='Ouvrir CoxInHell sur Instagram'><img src={LogoInstagram} alt="Logo Instagram" width={45} /></NavLink>
+                        <NavLink to='https://www.instagram.com/soulsplitterfr/' target='_blank' title='Ouvrir 𝐒𝐎𝐔𝐋 𝐒𝐏𝐋𝐈𝐓𝐓𝐄𝐑 sur Instagram'><img src={LogoInstagram} alt="Logo Instagram" width={45} /></NavLink>
+                        <NavLink to='https://soulsplitterband.com/' target='_blank' title='Ouvrir le site 𝐒𝐎𝐔𝐋 𝐒𝐏𝐋𝐈𝐓𝐓𝐄𝐑'><img src={LogoWWW} alt="Logo Internet" width={45} /></NavLink>
                     </div>
                 </h2>
-                <img className='imgArtist Soul Splitter' src={SoulSplitter1} alt="Soul Splitter avec sa Legouet" />
+                <img className='imgArtist Théo Sansano' src={SoulSplitter1} alt="Théo Sansaso avec sa Legouet" />
 
                 <h2>Marty ML <p>(Bassiste de Malt Liquor)</p>
                     <div className='logoWeb'>

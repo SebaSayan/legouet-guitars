@@ -65,39 +65,4 @@
         }
     }
 
-    .social-right {
-        display: flex;
-        gap: 30px;
-        align-items: center;
-
-        a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s ease;
-        }
-
-        a:hover {
-            transform: scale(1.15);
-        }
-
-        .facebook {
-            background-color: white;
-            border-radius: 50%;
-            font-size: 48px;
-            color: #1877F2;
-        }
-
-        .instagram img {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
-        }
-
-        .youtube img {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
-        }
-    }
 }

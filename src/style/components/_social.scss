@@ -1,0 +1,50 @@
+.social-right {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+    }
+
+    a:hover {
+        transform: scale(1.15);
+    }
+
+    .facebook {
+        width: 48px;
+        height: 48px;
+        color: #1877F2;
+    }
+
+    .instagram img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+
+    .youtube img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+
+    @media screen and (max-width: 600px) {
+        .instagram-logo {
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+
+    .social-links a {
+        transition: transform 0.3s ease;
+    }
+
+    .social-links a:hover {
+        transform: scale(1.15);
+    }
+}

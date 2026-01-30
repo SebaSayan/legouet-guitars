@@ -44,6 +44,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import imgInstagram from '../assets/img/Instagram_icon.png'
 import imgYoutube from '../assets/img/youtube_icon.png'
+import imgFacebook from '../assets/img/Facebook_Logo_2023.png'
 
 const FooterItem = ({ icon, children }) => (
     <div className="footer-item">
@@ -87,28 +88,29 @@ const Footer = () => (
             {/* COLONNE DROITE */}
             <div className="footer-right">
                 <h3>Suivez-nous</h3>
-                <div className="social-links">
+                <div className="social-right">
                     <a
                         href="https://www.facebook.com/share/17fufwemZz/"
-                        className="facebook"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="facebook"
+                        aria-label="Facebook"
                     >
-                        <FontAwesomeIcon icon={faFacebook} />
+                        <img
+                            src={imgFacebook}
+                            alt="Facebook"
+                            className="facebook"
+                        />
                     </a>
 
                     <a
                         href="https://www.instagram.com/legouet_guitares/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="social-logo"
+                        className="instagram"
                         aria-label="Instagram"
                     >
-                        <img
-                            src={imgInstagram}
-                            alt="Instagram"
-                            className="instagram-logo"
-                        />
+                        <img src={imgInstagram} alt="Instagram" />
                     </a>
 
                     <a
@@ -120,8 +122,6 @@ const Footer = () => (
                     >
                         <img src={imgYoutube} alt="YouTube" />
                     </a>
-
-
                 </div>
 
             </div>
