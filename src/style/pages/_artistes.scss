@@ -6,8 +6,18 @@
         padding: 20px 0 20px 0;
         width: 100%;
 
+        h1 {
+
+            margin-bottom: 100px;
+        }
+
         h2 {
+            font-size: 3rem;
             margin: 20px 0 20px 0;
+
+            p {
+                font-size: 1rem;
+            }
 
             .logoWeb {
                 display: flex;

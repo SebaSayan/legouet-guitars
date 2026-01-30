@@ -43,6 +43,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import imgInstagram from '../assets/img/Instagram_icon.png'
+import imgYoutube from '../assets/img/youtube_icon.png'
 
 const FooterItem = ({ icon, children }) => (
     <div className="footer-item">
@@ -108,6 +109,16 @@ const Footer = () => (
                             alt="Instagram"
                             className="instagram-logo"
                         />
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/@legouet-guitares/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="youtube"
+                        aria-label="YouTube"
+                    >
+                        <img src={imgYoutube} alt="YouTube" />
                     </a>
 
 

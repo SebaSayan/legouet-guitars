@@ -20,6 +20,7 @@ import Navbar from './Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import imgInstagram from '../assets/img/Instagram_icon.png';
+import imgYoutube from '../assets/img/youtube_icon.png';
 
 const Header = () => {
     return (
@@ -56,6 +57,16 @@ const Header = () => {
                         aria-label="Instagram"
                     >
                         <img src={imgInstagram} alt="Instagram" />
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/@legouet-guitares/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="youtube"
+                        aria-label="YouTube"
+                    >
+                        <img src={imgYoutube} alt="YouTube" />
                     </a>
                 </div>
 

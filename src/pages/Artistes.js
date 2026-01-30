@@ -4,6 +4,8 @@ import Footer from '../components/Footer';
 import LANDMVRKS1 from '../assets/img/LANDMVRKS1.jpg';
 import LANDMVRKS2 from '../assets/img/LANDMVRKS2.jpg';
 import SoulSplitter1 from '../assets/img/theo.jpeg';
+import Marty1 from '../assets/img/marty1.jpeg'
+import Marty2 from '../assets/img/marty2.jpeg'
 import Azelma1 from '../assets/img/azelma1.jpg';
 import Azelma2 from '../assets/img/azelma2.jpg';
 import SebastienGros from '../assets/img/sebastiengros.jpg';
@@ -18,7 +20,7 @@ const Artistes = () => {
             <Header />
             <section className='artistes'>
                 <h1>Voici les artistes qui nous font confiance</h1>
-                <h2>LANDMVRKS
+                <h2>Rudy Purkart <p>(Bassiste de LANDMVRKS)</p>
                     <div className='logoWeb'>
                         <NavLink to='https://www.instagram.com/landmvrks/' target='_blank' title='Ouvrir LANDMVRKS sur Instagram'><img src={LogoInstagram} alt="Logo Instagram" width={45} /></NavLink>
                         <NavLink to='https://www.landmvrks.com/' target='_blank' title='Ouvrir le site LANDMVRKS'><img src={LogoWWW} alt="Logo Internet" width={45} /></NavLink>
@@ -27,14 +29,22 @@ const Artistes = () => {
                 <img className='imgArtist' src={LANDMVRKS1} alt="Rudy Purkart avec sa Legouet" />
                 <img className='imgArtist' src={LANDMVRKS2} alt="Rudy Purkart avec sa Legouet" />
 
-                <h2>𝐒𝐎𝐔𝐋 𝐒𝐏𝐋𝐈𝐓𝐓𝐄𝐑
+                <h2>Théo Snow <p>(Guitariste de 𝐒𝐎𝐔𝐋 𝐒𝐏𝐋𝐈𝐓𝐓𝐄𝐑)</p>
                     <div className='logoWeb'>
                         <NavLink to='https://www.instagram.com/soulsplitterfr/' target='_blank' title='Ouvrir CoxInHell sur Instagram'><img src={LogoInstagram} alt="Logo Instagram" width={45} /></NavLink>
                     </div>
                 </h2>
                 <img className='imgArtist Soul Splitter' src={SoulSplitter1} alt="Soul Splitter avec sa Legouet" />
 
-                <h2>Azelma
+                <h2>Marty ML <p>(Bassiste de Malt Liquor)</p>
+                    <div className='logoWeb'>
+                        <NavLink to='https://www.instagram.com/marty_malt.liquor/' target='_blank' title='Ouvrir Marty Malt Liquor sur Instagram'><img src={LogoInstagram} alt="Logo Instagram" width={45} /></NavLink>
+                    </div>
+                </h2>
+                <img className='imgArtist' src={Marty1} alt="Marty avec sa Legouet" />
+                <img className='imgArtist' src={Marty2} alt="Marty avec sa Legouet" />
+
+                <h2>Romain Viale <p>(Guitariste prometteur)</p>
                     <div className='logoWeb'>
                         <NavLink to='https://www.instagram.com/azelma_official/' target='_blank' title='Ouvrir Azelma sur Instagram'><img src={LogoInstagram} alt="Logo Instagram" width={45} /></NavLink>
                         <NavLink to='https://azelmaofficial.com/' target='_blank' title='Ouvrir le site Azelma'><img src={LogoWWW} alt="Logo Internet" width={45} /></NavLink>
