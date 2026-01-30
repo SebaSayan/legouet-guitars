@@ -27,7 +27,7 @@ const Home = () => {
             <Header />
             <section className='guitars'>
                 <h1>Découvrez nos modèles sur mesure</h1>
-                <div className='text-container'>
+                <div className='text-home'>
                     <p>Découvrez en images et en vidéos nos guitares et basses custom, conçues et fabriquées sur mesure dans notre atelier.</p>
                 </div>
                 <div className="img-container guitar-card">

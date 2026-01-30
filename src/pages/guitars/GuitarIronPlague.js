@@ -104,7 +104,9 @@ const GuitarIronPlague = () => {
                     <p>Pour intervenir sur la tention des ressort, il suffit de dévisser le couvercle (opération qui se réalise seulement si on passe a un tirant plus élevé).</p>
                     <p>Poids = 3.400 Kg</p>
                 </div> */}
-                <p>4054 € TTC (Housse incluse)</p>
+                <div className='text-container'>
+                    <p>4054 € TTC (Housse incluse)</p>
+                </div>
             </div>
             <Footer />
         </div>

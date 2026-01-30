@@ -46,17 +46,19 @@ const Artistes = () => {
 
                 <h2>Romain Viale <p>(Guitariste prometteur)</p>
                     <div className='logoWeb'>
-                        <NavLink to='https://www.instagram.com/azelma_official/' target='_blank' title='Ouvrir Azelma sur Instagram'><img src={LogoInstagram} alt="Logo Instagram" width={45} /></NavLink>
-                        <NavLink to='https://azelmaofficial.com/' target='_blank' title='Ouvrir le site Azelma'><img src={LogoWWW} alt="Logo Internet" width={45} /></NavLink>
+                        <NavLink to='https://www.instagram.com/romainvle/' target='_blank' title='Ouvrir Romain Viale sur Instagram'><img src={LogoInstagram} alt="Logo Instagram" width={45} /></NavLink>
                     </div>
                 </h2>
                 <img className='imgArtist azelma1' src={Azelma1} alt="Romain Viale avec sa Legouet" />
                 <div className="videoArtist">
                     <iframe src="https://www.youtube.com/embed/NGlgLXB52Ks?si=ROPli4EnAdIH63J_" title="Romain d'Azelma sur YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
+                <h2>Arthur Valerioti <p>(Bassiste de précision)</p>
+                    <NavLink to="https://www.instagram.com/arthur_azelma" target='_blank' title='Ouvrir Arthur Valerioti sur Instagram'><img src={LogoInstagram} alt="Logo Instagram" width={45} /></NavLink>
+                </h2>
                 <img className='imgArtist azlema2' src={Azelma2} alt="Arthur Valerioti avec sa Legouet" />
                 <div className="videoArtist">
-                    <iframe src="https://www.youtube.com/embed/Tt_SbwucBo0?si=8CMSVB_2Dc87uOPj" title="Tristan d'Azelma sur YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Tt_SbwucBo0?si=8CMSVB_2Dc87uOPj" title="Artur d'Azelma sur YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
 
                 <h2>Sebastien Gros
@@ -77,8 +79,6 @@ const Artistes = () => {
                 <div className="videoArtist">
                     <iframe src="https://www.youtube.com/embed/kx_Dt1SsVr4?si=s3RqNaQHfloGzP5_" title="Présentation d'une Legouet par NeoGeoFanatic sur YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-
-
 
             </section >
             <Footer />

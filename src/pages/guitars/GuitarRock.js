@@ -92,12 +92,27 @@ const GuitarRock = () => {
                     </div>
                 </div>
                 <div className='text-container'>
-                    <p>Corps aluminium peinture Gold, <strong>manche aluminium</strong> touche inox, <strong>acastillage inox</strong>, micros mini humbucker type firebird , 1 volume, 1 tone.</p>
-                    <p>Construction identique au modèle STUDIO, sauf que l'acastillage est en INOX (bouton de potentiomètre, tour de micros et chevalet).</p>
-                    <p>Ces micros type firebird lui confèrent une certaine  agressivité afin de reproduire vos chanson ROCK favorites.</p>
-                    <p>Cette guitare est à l'aise dans un registre qui va du rock au métal années 80.</p>
-                    <p>Poids = 3.400 Kg</p>
-                    <p>3860 € TTC (Housse incluse)</p>
+                    <p>
+                        Corps en aluminium peint en or, <strong>manche en aluminium</strong> avec touche en inox,
+                        <strong>accastillage en inox</strong>, micros mini humbucker de type Firebird,
+                        1 volume et 1 tonalité.
+                    </p>
+
+                    <p>
+                        La construction est identique au modèle <strong>STUDIO</strong>, à la différence que l’accastillage est entièrement en inox
+                        (boutons de potentiomètres, contours de micros et chevalet).
+                    </p>
+
+                    <p>
+                        Les micros de type Firebird lui confèrent une agressivité maîtrisée, idéale pour reproduire vos chansons rock favorites.
+                    </p>
+
+                    <p>
+                        Cette guitare est parfaitement à l’aise dans des registres allant du rock au métal des années 80.
+                    </p>
+
+                    <p><strong>Poids :</strong> 3,4 kg</p>
+                    <p><strong>Prix :</strong> 3 860 € TTC (housse incluse)</p>
                 </div>
             </div>
             <Footer />

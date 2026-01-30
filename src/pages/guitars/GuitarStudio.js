@@ -95,14 +95,42 @@ const GuitarStudio = () => {
                     </div>
                 </div>
                 <div className='text-container'>
-                    <p>Corps aluminium peint blanc nacré, <strong>manche infinite, acastillage en titane</strong> (boutons de volume et chevalet), micros Legouet Humbucker et deux sorties 1 jack et 1 MIDI Roland GT3 avec deux volumes ( un pour les micros , et l'autre pour le GT3 Roland).</p>
-                    <p>Modèle directement influencé par <a href="http://www.coxinhellstudio.com/" target="_blank" rel="noopener noreferrer">Sebastien Gros</a>.</p>
-                    <p>Cette guitare est de structure identique à la précedente, elle est équipée d'un capteur MIDI qui lui permet de réaliser tous les sons possible et inimaginables avec <a href="https://www.thomann.de/fr/roland_gr55gk_black.htm" target="_blank" rel="noopener noreferrer">le pédalier GR55 Roland</a>.</p>
-                    <p>Combiné à une carte son et un PC, vous pouvez également jouir de toute les banques son MIDI que vous possedez.</p>
-                    <p>Ses Micros Legouet Humbucker permettent un registre très large passant du Jazz au métal technique qui peuvent se combiner au son du Capteur MIDI ( un son de piano et celui de la guitare en simultané).</p>
-                    <p>Il est possible d'enregistrer un album entier avec ce seul instrument.</p>
-                    <p>Poids = 3.450 Kg</p>
-                    <p>4317 € TTC (Housse incluse)</p>
+                    <p>
+                        Corps en aluminium peint blanc nacré, <strong>manche Infinite</strong>,
+                        <strong>accastillage en titane</strong> (boutons de volume et chevalet),
+                        micros Legouet Humbucker, et deux sorties :
+                        1 jack et 1 MIDI Roland GT3, avec deux volumes distincts
+                        (un pour les micros, l’autre pour le GT3 Roland).
+                    </p>
+
+                    <p>
+                        Modèle directement influencé par
+                        <a href="http://www.coxinhellstudio.com/" target="_blank" rel="noopener noreferrer"> Sébastien Gros</a>.
+                    </p>
+
+                    <p>
+                        Cette guitare est de structure identique au modèle précédent.
+                        Elle est équipée d’un capteur MIDI lui permettant de produire tous les sons possibles et imaginables
+                        avec <a href="https://www.thomann.de/fr/roland_gr55gk_black.htm" target="_blank" rel="noopener noreferrer">le pédalier Roland GR-55</a>.
+                    </p>
+
+                    <p>
+                        Combinée à une carte son et à un ordinateur, elle permet également d’exploiter
+                        toutes les banques de sons MIDI que vous possédez.
+                    </p>
+
+                    <p>
+                        Ses micros Legouet Humbucker offrent un registre très large, allant du jazz au métal technique,
+                        et peuvent être combinés au son du capteur MIDI
+                        (par exemple un son de piano et celui de la guitare en simultané).
+                    </p>
+
+                    <p>
+                        Il est possible d’enregistrer un album entier avec ce seul instrument.
+                    </p>
+
+                    <p><strong>Poids :</strong> 3,45 kg</p>
+                    <p><strong>Prix :</strong> 4 317 € TTC (housse incluse)</p>
                     <div style={{ display: "flex", justifyContent: 'center' }}>
                         <ReactPlayer url={videoGuitar} controls={true} light={imgVignette1} />
                     </div>

@@ -85,11 +85,24 @@ const GuitarMetalPrecision = () => {
                     </div>
                 </div>
                 <div className='text-container'>
-                    <p>Corps aluminium vernis noir, manche aluminium "infinite", cordier <strong>tune o matic titanium</strong> et micros <a href="https://www.dimarzio.com/artists/joe-duplantier" target="_blank" rel="noopener noreferrer">DiMarzio joe duplantier</a>.</p>
-                    <p>Cette guitare permet de réaliser toutes les rythmiques métal les plus techniques, sa structure rigide lui confère une grande stabilité ainsi qu'une dynamique impresionnante.</p>
-                    <p>Possibilité de jouer dans un registre blues rock grâce à ses micros passifs au niveau de sortie modérée ( un vrai "couteau suisse").</p>
-                    <p>Poids = 3.350 Kg</p>
-                    <p>4018 € TTC (Housse incluse)</p>
+                    <p>
+                        Corps en aluminium verni noir, manche en aluminium « Infinite »,
+                        cordier <strong>Tune-o-matic en titane</strong> et micros
+                        <a href="https://www.dimarzio.com/artists/joe-duplantier" target="_blank" rel="noopener noreferrer"> DiMarzio Joe Duplantier</a>.
+                    </p>
+
+                    <p>
+                        Cette guitare permet de réaliser toutes les rythmiques métal les plus techniques.
+                        Sa structure rigide lui confère une grande stabilité ainsi qu’une dynamique impressionnante.
+                    </p>
+
+                    <p>
+                        Elle offre également la possibilité d’évoluer dans un registre blues-rock,
+                        grâce à ses micros passifs au niveau de sortie modéré (un véritable « couteau suisse »).
+                    </p>
+
+                    <p><strong>Poids :</strong> 3,35 kg</p>
+                    <p><strong>Prix :</strong> 4 018 € TTC (housse incluse)</p>
                     <div style={{ display: "flex", justifyContent: 'center', width: '100%', gap: '10px', flexWrap: 'wrap', margin: '0 auto' }}>
                         <ReactPlayer url="https://www.youtube.com/watch?v=3kcbSFx1Fsk" controls={true} />
                         <ReactPlayer url="https://www.youtube.com/watch?v=X50Eji4G91A&t=416s" controls={true} />

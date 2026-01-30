@@ -77,10 +77,6 @@ form {
                 }
             }
         }
-
-        // a {
-        //     margin: 0 5px;
-        // }
     }
 
     textarea {
@@ -88,16 +84,6 @@ form {
         min-width: 99%;
         max-width: 99%;
         min-height: 50px;
-
-        // @media screen and (max-width: 542px) {
-        //     min-width: 300px;
-        //     max-width: 300px;
-        // }
-
-        // @media screen and (max-width: 320px) {
-        //     min-width: 280px;
-        //     max-width: 280px;
-        // }
     }
 
     input,
@@ -117,33 +103,16 @@ form {
         &:focus {
             outline: none;
         }
-
-        // @media screen and (max-width: 542px) {
-        //     width: 300px;
-        // }
-
-        // @media screen and (max-width: 320px) {
-        //     width: 280px;
-        // }
     }
 
     .PhoneInput {
         width: 99.8%;
         margin-left: 10px;
 
-        // @media screen and (max-width: 542px) {
-        //     width: 300px;
-        // }
-
-        // @media screen and (max-width: 320px) {
-        //     width: 280px;
-        // }
-
         .PhoneInputCountry {
             font-size: 1.2rem;
             margin-bottom: 10px;
             border-bottom: 1px solid white;
-
         }
     }
 

@@ -92,12 +92,28 @@ const GuitarJazzFusion = () => {
                     </div>
                 </div>
                 <div className='text-container'>
-                    <p>Corps en aluminium vernis rouge, pickguard en alu vernis noir, manche en érable <strong>frettes inox</strong>, un vibrato <a href="https://www.thomann.de/fr/schaller_vintage_tremolo_3801_chrome.htm" target="_blank" rel="noopener noreferrer">Shaller Vintage Tremolo</a> et deux micros Legouet mini double bobinage (micros simple à haut niveau de sortie).</p>
-                    <p>Une guitare parfaite pour un shred précis et endiablé. Son vibrato permettant de faire des "dive bomb"  mais aussi d'élever d'un ton sans se désacorder.</p>
-                    <p>On peut passer en drop D ou changer d'accordage sans dificulté car elle n'a pas de sillet bloc corde.</p>
-                    <p>Pour intervenir sur la tention des ressort, il suffit de dévisser le couvercle (opération qui se réalise seulement si on passe a un tirant plus élevé).</p>
-                    <p>Poids = 3.400 Kg</p>
-                    <p>3227 € TTC (Housse incluse)</p>
+                    <p>
+                        Corps en aluminium verni rouge, pickguard en aluminium verni noir, manche en érable avec <strong>frettes inox</strong>, vibrato <a href="https://www.thomann.de/fr/schaller_vintage_tremolo_3801_chrome.htm" target="_blank" rel="noopener noreferrer">Schaller Vintage Tremolo</a>,
+                        et deux micros Legouet mini double bobinage (micros simples à haut niveau de sortie).
+                    </p>
+
+                    <p>
+                        Une guitare parfaite pour un shred précis et endiablé. Son vibrato permet de réaliser des « dive bombs »,
+                        mais aussi d’élever l’accordage d’un ton sans se désaccorder.
+                    </p>
+
+                    <p>
+                        Le passage en drop D ou le changement d’accordage se fait sans difficulté,
+                        car la guitare ne possède pas de sillet bloque-cordes.
+                    </p>
+
+                    <p>
+                        Pour intervenir sur la tension des ressorts, il suffit de dévisser le couvercle
+                        (opération nécessaire uniquement en cas de passage à un tirant plus élevé).
+                    </p>
+
+                    <p><strong>Poids :</strong> 3,4 kg</p>
+                    <p><strong>Prix :</strong> 3 227 € TTC (housse incluse)</p>
                 </div>
             </div>
             <Footer />

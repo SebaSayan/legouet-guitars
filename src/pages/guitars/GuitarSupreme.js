@@ -83,10 +83,19 @@ const GuitarSupreme = () => {
                     </div>
                 </div>
                 <div className='text-container'>
-                    <p>Corps en titane taillé dans la masse, vernis, cordier standard avec pontet en bronze, un manche en érable teinté noir, des repères en nacre blanc, des micros DI MARZIO Joe dupalntier, 1 volume , 1 tone et bouton aluminium.</p>
-                    <p>Une merveille esthétique et sonore qui ne peut laisser indifférent.</p>
-                    <p>Poids = 3.340 Kg</p>
-                    <p>25 000 € TTC (Housse incluse)</p>
+                    <p>
+                        Corps en titane taillé dans la masse et verni, cordier standard avec pontets en bronze,
+                        manche en érable teinté noir, repères en nacre blanche,
+                        micros <strong>DiMarzio Joe Duplantier</strong>,
+                        1 volume, 1 tonalité et bouton en aluminium.
+                    </p>
+
+                    <p>
+                        Une merveille esthétique et sonore qui ne laisse personne indifférent.
+                    </p>
+
+                    <p><strong>Poids :</strong> 3,34 kg</p>
+                    <p><strong>Prix :</strong> 25 000 € TTC (housse incluse)</p>
                     <div style={{ display: "flex", justifyContent: 'center', width: '100%', gap: '10px', flexWrap: 'wrap', margin: '0 auto' }}>
                         <ReactPlayer url="https://www.youtube.com/watch?v=kVqpNewlAY8" controls={true} />
                         <ReactPlayer url="https://youtu.be/eUPjFY5QshY" controls={true} />

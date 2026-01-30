@@ -1,27 +1,28 @@
 import React from 'react';
-import Modal from 'react-modal';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import imgMancheAlu from '../assets/img/manche-alu.jpg';
-import imgMancheBois from '../assets/img/manche-bois.jpg';
-import imgMancheAlu2 from '../assets/img/manche-alu2.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import ReactPlayer from 'react-player';
+// import Modal from 'react-modal';
+// import imgMancheAlu from '../assets/img/manche-alu.jpg';
+// import imgMancheBois from '../assets/img/manche-bois.jpg';
+// import imgMancheAlu2 from '../assets/img/manche-alu2.jpg';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faCheck } from '@fortawesome/free-solid-svg-icons';
+// import { useState } from 'react';
 
 const APropos = () => {
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
-    const [selectedAlt, setSelectedAlt] = useState(null);
-    const altMancheAlu = 'Manche de guitare en aluminium';
-    const altMancheAlu2 = 'Manches de guitare en aluminium';
-    const altMancheBois = 'Manche de guitare en bois';
+    // const [modalIsOpen, setModalIsOpen] = useState(false);
+    // const [selectedImage, setSelectedImage] = useState(null);
+    // const [selectedAlt, setSelectedAlt] = useState(null);
+    // const altMancheAlu = 'Manche de guitare en aluminium';
+    // const altMancheAlu2 = 'Manches de guitare en aluminium';
+    // const altMancheBois = 'Manche de guitare en bois';
 
-    const handleOpenModal = (image, alt) => {
-        setSelectedImage(image);
-        setSelectedAlt(alt);
-        setModalIsOpen(true);
-    }
+    // const handleOpenModal = (image, alt) => {
+    //     setSelectedImage(image);
+    //     setSelectedAlt(alt);
+    //     setModalIsOpen(true);
+    // }
     return (
         <div className="body">
             <Header />
@@ -42,7 +43,10 @@ const APropos = () => {
             <section className='caracteristiques'>
                 <h1>Fabrication de guitares personnalisés</h1>
                 <div className="container">
-                    <div className="cart">
+                    <div className='video-a-propos'>
+                        <ReactPlayer url="https://www.youtube.com/watch?v=gAFyJ2nS7Wk" controls={true} />
+                    </div>
+                    {/* <div className="cart">
                         <h2>Caractéristiques générales</h2>
                         <ul>
                             <li><FontAwesomeIcon className='icon' icon={faCheck} /> Design unique et configurations multiples.</li>
@@ -55,8 +59,8 @@ const APropos = () => {
                             <li><FontAwesomeIcon className='icon' icon={faCheck} /> Guitares équipées <a href="https://www.jimdunlop.com/straplok-strap-retainers-dual-design-nickel/" target="_blank" rel="noopener noreferrer">d'attache-courroie "Strap lock"</a> et de <a href="http://www.sperzel.com/colors-finishes.php" target="_blank" rel="noopener noreferrer">mécaniques Sperzel 6X6</a>.</li>
                             <li><FontAwesomeIcon className='icon' icon={faCheck} /> Finitions de peinture et vernis au choix selon la gamme <a href="https://www.couleursral.fr/ral-design" target="_blank" rel="noopener noreferrer">Ral Design</a>.</li>
                         </ul>
-                    </div>
-                    <div className="cart">
+                    </div> */}
+                    {/* <div className="cart">
                         <h2>Technologie de nos manches</h2>
                         <h3>Le manche "Infinite" usiné en <a href="https://www.thyssenkrupp-materials.ch/fr/downloads/fiches-techniques-aluminium" target="_blank" rel="noopener noreferrer">aluminium 6082</a> avec une touche inox rapportée</h3>
                         <ul>
@@ -71,7 +75,6 @@ const APropos = () => {
                             <li><FontAwesomeIcon className='icon' icon={faCheck} /> Dynamique accrue.</li>
                             <li><FontAwesomeIcon className='icon' icon={faCheck} /> Aucune oxydation.</li>
                             <li><FontAwesomeIcon className='icon' icon={faCheck} /> Frettes de 1.6 mm de hauteur, usinées dans la touche (de nombreuses planimétries possibles).</li>
-                            {/* <li className='red-list'><FontAwesomeIcon className='red-icon' icon={faXmark} /> Les frettes ne peuvent pas être remplacées.</li> */}
                         </ul>
                         <img
                             src={imgMancheAlu}
@@ -79,8 +82,8 @@ const APropos = () => {
                             onClick={() => handleOpenModal(imgMancheAlu, altMancheAlu)}
                             style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
                         />
-                    </div>
-                    <div className="cart">
+                    </div> */}
+                    {/* <div className="cart">
                         <h2>Le manche en aluminium "Light Weight", réalisé avec la même nuance d'aluminium, comporte une touche en aluminium et des frettes rapportées</h2>
                         <ul>
                             <li><FontAwesomeIcon className='icon' icon={faCheck} /> Poids : 800 grammes (hors mécaniques).</li>
@@ -97,8 +100,8 @@ const APropos = () => {
                             onClick={() => handleOpenModal(imgMancheAlu2, altMancheAlu2)}
                             style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
                         />
-                    </div>
-                    <div className="cart">
+                    </div> */}
+                    {/* <div className="cart">
                         <h2>Le Manche en Bois</h2>
                         <ul>
                             <li><FontAwesomeIcon className='icon' icon={faCheck} /> Plusieurs essences de bois disponibles.</li>
@@ -127,7 +130,7 @@ const APropos = () => {
                                 style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
                             />
                         </Modal>
-                    </div>
+                    </div> */}
                 </div>
             </section>
             <Footer />
