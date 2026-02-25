@@ -1,5 +1,5 @@
 import React from 'react';
-import imgLaGiger1 from '../assets/img/img_0008.jpg';
+import imgLaGrinder1 from '../assets/img/img_0008.jpg';
 import imgJazzFusion3 from '../assets/img/img_0040.jpg';
 import imgMetalPrecision1 from '../assets/img/img_5736.jpg';
 import imgStudio3 from '../assets/img/img_0031.jpg';
@@ -13,7 +13,7 @@ import Footer from '../components/Footer';
 import { NavLink } from 'react-router-dom';
 
 const Home = () => {
-    const altLaGiger = 'Basse La Giger';
+    const altLaGrinder = 'Basse La Grinder';
     const altJazzFusion = 'Guitare Jazz Fusion rouge';
     const altMetalPrecision = 'Guitare Metal précision';
     const altStudio = 'Guitare Studio Blanche';
@@ -21,7 +21,7 @@ const Home = () => {
     const altSupreme = 'Guitare Suprême en titane';
     const altUltime = 'Guitare ULTIME corps en titane et manche aluminium vernis';
     const altCamoBlue = 'Guitare Camo Blue';
-    const altJoffreyLegouet1 = 'Joffrey Legouet avec la basse La Giger'
+    const altJoffreyLegouet1 = 'Joffrey Legouet avec la basse La Grinder'
     return (
         <div className="body">
             <Header />
@@ -31,15 +31,15 @@ const Home = () => {
                     <p>Découvrez en images et en vidéos nos guitares et basses custom, conçues et fabriquées sur mesure dans notre atelier.</p>
                 </div>
                 <div className="img-container guitar-card">
-                    <h2>La Giger</h2>
-                    <NavLink to="/bass/la-giger"><img
+                    <h2>La Grinder</h2>
+                    <NavLink to="/bass/la-Grinder"><img
                         className='card'
-                        src={imgLaGiger1}
-                        alt={altLaGiger}
+                        src={imgLaGrinder1}
+                        alt={altLaGrinder}
                     />
                     </NavLink>
                     <div className='price-plus'>
-                        <NavLink to="/bass/la-giger" aria-label="Lire les spécificités de La Giger et voir les photos">Voir plus</NavLink>
+                        <NavLink to="/bass/la-Grinder" aria-label="Lire les spécificités de La Grinder et voir les photos">Voir plus</NavLink>
                     </div>
                 </div>
                 <div className="img-container guitar-card">

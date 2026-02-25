@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
-import imgLaGiger1 from '../../assets/img/img_0008.jpg';
-import imgLaGiger2 from '../../assets/img/Basse Rudy-15.jpg';
-import imgLaGiger3 from '../../assets/img/img_0010.jpg';
-import imgLaGiger4 from '../../assets/img/Basse Rudy-7.jpg';
-import imgLaGiger5 from '../../assets/img/Basse Rudy-16.jpg';
-import imgLaGiger6 from '../../assets/img/Basse Rudy-23.jpg';
-import imgLaGiger7 from '../../assets/img/Basse Rudy-9.jpg';
-import imgLaGiger8 from '../../assets/img/Basse Rudy-10.jpg';
-import imgLaGiger9 from '../../assets/img/Basse Rudy-18.jpg';
-import imgLaGiger10 from '../../assets/img/Basse Rudy-22.jpg';
-import imgLaGiger11 from '../../assets/img/Basse Rudy-28.jpg';
+import imgLaGrinder1 from '../../assets/img/img_0008.jpg';
+import imgLaGrinder2 from '../../assets/img/Basse Rudy-15.jpg';
+import imgLaGrinder3 from '../../assets/img/img_0010.jpg';
+import imgLaGrinder4 from '../../assets/img/Basse Rudy-7.jpg';
+import imgLaGrinder5 from '../../assets/img/Basse Rudy-16.jpg';
+import imgLaGrinder6 from '../../assets/img/Basse Rudy-23.jpg';
+import imgLaGrinder7 from '../../assets/img/Basse Rudy-9.jpg';
+import imgLaGrinder8 from '../../assets/img/Basse Rudy-10.jpg';
+import imgLaGrinder9 from '../../assets/img/Basse Rudy-18.jpg';
+import imgLaGrinder10 from '../../assets/img/Basse Rudy-22.jpg';
+import imgLaGrinder11 from '../../assets/img/Basse Rudy-28.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import BackButton from '../../components/BackButton';
 
-const BassLaGiger = () => {
+const BassLaGrinder = () => {
     useEffect(() => {
         const element = document.getElementById("bass");
         if (element) {
@@ -27,7 +27,7 @@ const BassLaGiger = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
     const [selectedAlt, setSelectedAlt] = useState(null);
-    const altLaGiger = 'Basse La Giger';
+    const altLaGrinder = 'Basse La Grinder';
     const handleOpenModal = (image, alt) => {
         setSelectedImage(image);
         setSelectedAlt(alt);
@@ -38,83 +38,83 @@ const BassLaGiger = () => {
             <Header />
             <div className='bass' id='bass'>
                 <BackButton />
-                <h1>La Giger</h1>
+                <h1>La Grinder</h1>
                 <div className="img-container">
                     <img
                         className='card'
-                        src={imgLaGiger1}
-                        alt={altLaGiger}
-                        onClick={() => handleOpenModal(imgLaGiger1, altLaGiger)}
+                        src={imgLaGrinder1}
+                        alt={altLaGrinder}
+                        onClick={() => handleOpenModal(imgLaGrinder1, altLaGrinder)}
                         style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
                     />
                     <img
                         className='card'
-                        src={imgLaGiger2}
-                        alt={altLaGiger}
-                        onClick={() => handleOpenModal(imgLaGiger2, altLaGiger)}
+                        src={imgLaGrinder2}
+                        alt={altLaGrinder}
+                        onClick={() => handleOpenModal(imgLaGrinder2, altLaGrinder)}
                         style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
                     />
                     <img
                         className='card'
-                        src={imgLaGiger3}
-                        alt={altLaGiger}
-                        onClick={() => handleOpenModal(imgLaGiger3, altLaGiger)}
+                        src={imgLaGrinder3}
+                        alt={altLaGrinder}
+                        onClick={() => handleOpenModal(imgLaGrinder3, altLaGrinder)}
                         style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
                     />
                     <img
                         className='card'
-                        src={imgLaGiger4}
-                        alt={altLaGiger}
-                        onClick={() => handleOpenModal(imgLaGiger4, altLaGiger)}
+                        src={imgLaGrinder4}
+                        alt={altLaGrinder}
+                        onClick={() => handleOpenModal(imgLaGrinder4, altLaGrinder)}
                         style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
                     />
                     <img
                         className='card'
-                        src={imgLaGiger5}
-                        alt={altLaGiger}
-                        onClick={() => handleOpenModal(imgLaGiger5, altLaGiger)}
+                        src={imgLaGrinder5}
+                        alt={altLaGrinder}
+                        onClick={() => handleOpenModal(imgLaGrinder5, altLaGrinder)}
                         style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
                     />
                     <img
                         className='card'
-                        src={imgLaGiger6}
-                        alt={altLaGiger}
-                        onClick={() => handleOpenModal(imgLaGiger6, altLaGiger)}
+                        src={imgLaGrinder6}
+                        alt={altLaGrinder}
+                        onClick={() => handleOpenModal(imgLaGrinder6, altLaGrinder)}
                         style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
                     />
                     <img
                         className='card'
-                        src={imgLaGiger7}
-                        alt={altLaGiger}
-                        onClick={() => handleOpenModal(imgLaGiger7, altLaGiger)}
+                        src={imgLaGrinder7}
+                        alt={altLaGrinder}
+                        onClick={() => handleOpenModal(imgLaGrinder7, altLaGrinder)}
                         style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
                     />
                     <img
                         className='card'
-                        src={imgLaGiger8}
-                        alt={altLaGiger}
-                        onClick={() => handleOpenModal(imgLaGiger8, altLaGiger)}
+                        src={imgLaGrinder8}
+                        alt={altLaGrinder}
+                        onClick={() => handleOpenModal(imgLaGrinder8, altLaGrinder)}
                         style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
                     />
                     <img
                         className='card'
-                        src={imgLaGiger9}
-                        alt={altLaGiger}
-                        onClick={() => handleOpenModal(imgLaGiger9, altLaGiger)}
+                        src={imgLaGrinder9}
+                        alt={altLaGrinder}
+                        onClick={() => handleOpenModal(imgLaGrinder9, altLaGrinder)}
                         style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
                     />
                     <img
                         className='card'
-                        src={imgLaGiger10}
-                        alt={altLaGiger}
-                        onClick={() => handleOpenModal(imgLaGiger10, altLaGiger)}
+                        src={imgLaGrinder10}
+                        alt={altLaGrinder}
+                        onClick={() => handleOpenModal(imgLaGrinder10, altLaGrinder)}
                         style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
                     />
                     <img
                         className='card'
-                        src={imgLaGiger11}
-                        alt={altLaGiger}
-                        onClick={() => handleOpenModal(imgLaGiger11, altLaGiger)}
+                        src={imgLaGrinder11}
+                        alt={altLaGrinder}
+                        onClick={() => handleOpenModal(imgLaGrinder11, altLaGrinder)}
                         style={{ cursor: 'pointer', maxWidth: '100%', height: 'auto' }}
                     />
                 </div>
@@ -134,7 +134,7 @@ const BassLaGiger = () => {
                 <div className='caracteristiques'>
                     <div className="container">
                         <div className="cart">
-                            <h2>Caractéristiques La Giger</h2>
+                            <h2>Caractéristiques La Grinder</h2>
                             <ul>
                                 <li><FontAwesomeIcon className='icon' icon={faCheck} /> Diapason 34.5</li>
                                 <li><FontAwesomeIcon className='icon' icon={faCheck} /> 22 frettes</li>
@@ -183,4 +183,4 @@ const BassLaGiger = () => {
     );
 };
 
-export default BassLaGiger;
+export default BassLaGrinder;

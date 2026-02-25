@@ -12,7 +12,7 @@ $subject     = $data["subject"] ?? "";
 $htmlContent = $data["htmlContent"] ?? "";
 $to          = $data["to"] ?? [];
 
-$apiKey = "";
+$apiKey = "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";
 
 $payload = json_encode([
     "sender"      => $sender,

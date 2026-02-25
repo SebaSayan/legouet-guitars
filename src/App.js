@@ -19,7 +19,7 @@ import Basses from "./pages/Basses";
 import Artistes from "./pages/Artistes";
 import Galerie from "./pages/Galerie";
 import APropos from "./pages/APropos";
-import BassLaGiger from "./pages/bass/BassLaGiger";
+import BassLaGrinder from "./pages/bass/BassLaGrinder";
 
 function App() {
   return (
@@ -41,7 +41,7 @@ function App() {
         <Route path="/guitares/ultime" element={<GuitarUltime />} />
         <Route path="/guitares/camo-blue" element={<GuitarCamoBlue />} />
         <Route path="/guitares/iron-plague" element={<GuitarIronPlague />} />
-        <Route path="/bass/la-giger" element={<BassLaGiger />} />
+        <Route path="/bass/la-grinder" element={<BassLaGrinder />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route path="/confidentialite" element={<Confidentiality />} />
         <Route path="*" element={<NotFound />} />
