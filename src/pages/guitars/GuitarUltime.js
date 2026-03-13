@@ -94,7 +94,7 @@ const GuitarUltime = () => {
                     </p>
 
                     <p><strong>Poids :</strong> 3,57 kg</p>
-                    <p><strong>Prix :</strong> 25 000 € TTC (housse incluse)</p>
+                    <p><strong>Prix :</strong> Sur devis</p>
                 </div>
             </div>
             <Footer />

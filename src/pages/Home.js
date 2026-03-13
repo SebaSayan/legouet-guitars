@@ -128,7 +128,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='img-container guitar-card'>
-                    <h2>Monsieur Legouet</h2>
+                    <h2>Joffrey Legouet</h2>
                     <img
                         className='card'
                         src={imgJoffreyLegouet1}

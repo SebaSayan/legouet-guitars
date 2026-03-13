@@ -95,7 +95,7 @@ const GuitarSupreme = () => {
                     </p>
 
                     <p><strong>Poids :</strong> 3,34 kg</p>
-                    <p><strong>Prix :</strong> 25 000 € TTC (housse incluse)</p>
+                    <p><strong>Prix :</strong> Sur devis</p>
                     <div style={{ display: "flex", justifyContent: 'center', width: '100%', gap: '10px', flexWrap: 'wrap', margin: '0 auto' }}>
                         <ReactPlayer url="https://www.youtube.com/watch?v=kVqpNewlAY8" controls={true} />
                         <ReactPlayer url="https://youtu.be/eUPjFY5QshY" controls={true} />

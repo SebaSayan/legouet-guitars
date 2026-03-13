@@ -137,7 +137,7 @@ const Contact = () => {
                 <h1>Contacter notre usine</h1>
                 <p>
                     LF Industrie est spécialisée dans l’usinage de pièces de précision ainsi que dans la fabrication de guitares et basses électriques en titane et en aluminium.
-                    <strong> Contactez notre usine de pièces mécaniques en PACA</strong> afin d’échanger sur votre projet d’instrument sur mesure avec Monsieur Legouet, expert en usinage et en conception, passionné de guitare.
+                    <strong> Contactez notre usine de pièces mécaniques en PACA</strong> afin d’échanger sur votre projet d’instrument sur mesure avec Joffrey Legouet.
                 </p>
                 <div className="container">
                     <div className="address">
